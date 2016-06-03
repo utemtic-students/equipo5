@@ -1,0 +1,8 @@
+﻿
+@{
+    ViewBag.Title = "Myprofile";
+}
+
+<h2>Myprofile</h2>
+
+<h3>Bienvenido @(Request.IsAuthenticated ? HttpContext.Current.User.Identity.Name : "Guest") - Esto es para usuarios autorizados</h3>
