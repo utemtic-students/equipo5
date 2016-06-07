@@ -5,5 +5,5 @@
 
 <h2>Seccion de cafetería</h2>
 
-<h3>Bienvenido @(Request.IsAuthenticated ? HttpContext.Current.User.Identity.Name : "Guest") - Esta es la sección de cafetería</h3>
+<h3>Bienvenido(a) @(Request.IsAuthenticated ? HttpContext.Current.User.Identity.Name : "Guest") - Esta es la sección de cafetería</h3>
 

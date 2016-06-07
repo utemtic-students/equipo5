@@ -3,5 +3,4 @@
     ViewBag.Title = "Padres";
 }
 
-<h2>Padres</h2>
-
+<h3>Bienvenido(a) @(Request.IsAuthenticated ? HttpContext.Current.User.Identity.Name : "Guest") - Esta es la sección de padres.</h3>
