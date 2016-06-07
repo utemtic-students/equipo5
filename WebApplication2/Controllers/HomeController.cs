@@ -15,7 +15,7 @@ namespace WebApplication2.Controllers
         }
 
         [Authorize] // Esto es para usuarios autorizados
-        public ActionResult Myprofile()
+        public ActionResult Cafeteria()
         {
             return View();
         }

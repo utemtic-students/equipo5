@@ -26,13 +26,13 @@
 <body>
     <ul class="menu">
        <li>@Html.ActionLink("Inicio", "Index", "Home")</li >
-        <li>@Html.ActionLink("Mi perfil", "Myprofile", "Home")</li>
+        <li>@Html.ActionLink("Cafeteria", "Cafeteria", "Home")</li>
         <li>@{
             if (Request.IsAuthenticated)
             {
                 using (Html.BeginForm("Logout", "MyAccount", FormMethod.Post, new { id = "logoutform" }))
                 {
-                    <a href="javascript:document.getElementById('logoutform').submit()">Logout</a>
+                    <a href="javascript:document.getElementById('logoutform').submit()">Cerrar sesión</a>
                 }
             }else
             {

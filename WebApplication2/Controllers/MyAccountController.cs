@@ -20,16 +20,17 @@ namespace WebApplication2.Controllers
         {
             using (MyDatabaseEntities dc = new MyDatabaseEntities())
             {
-                var user = dc.Users.Where(a => a.Username.Equals(l.Username) && a.Password.Equals(l.Password)).FirstOrDefault();
+                var user = dc.Users.Where(a => a.Username.Equals(l.Username) && a.Password.Equals(l.Password) && a.Area.Equals("cafeteria")).FirstOrDefault();
                 if (user != null)
                 {
                     FormsAuthentication.SetAuthCookie(user.Username, l.RememberMe);
-                    if (Url.IsLocalUrl(ReturnUrl))
+                    if (user.Area=="cafeteria")
                     {
-                        return Redirect(ReturnUrl);
+                        return RedirectToAction("Cafeteria", "HOme");
+                        
                     }else
                     {
-                        return RedirectToAction("MyProfile", "Home");
+                        return Redirect(ReturnUrl);
                     }
                 }
             }

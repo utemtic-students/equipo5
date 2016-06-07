@@ -20,5 +20,6 @@ namespace WebApplication2
         public string FirstName { get; set; }
         public string LastNane { get; set; }
         public string EmailID { get; set; }
+        public string Area { get; set; }
     }
 }
