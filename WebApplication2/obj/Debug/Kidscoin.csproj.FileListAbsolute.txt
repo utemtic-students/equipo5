@@ -46,6 +46,7 @@ C:\Users\USUARIO\Documents\Visual Studio 2015\Projects\WebApplication2\WebApplic
 C:\Users\USUARIO\Documents\Visual Studio 2015\Projects\WebApplication2\WebApplication2\bin\WebApplication2.dll.config
 C:\Users\USUARIO\Documents\Visual Studio 2015\Projects\WebApplication2\WebApplication2\bin\WebApplication2.dll
 C:\Users\USUARIO\Documents\Visual Studio 2015\Projects\WebApplication2\WebApplication2\bin\WebApplication2.pdb
+C:\Users\USUARIO\Documents\Visual Studio 2015\Projects\WebApplication2\WebApplication2\bin\EntityFramework.dll
 C:\Users\USUARIO\Documents\Visual Studio 2015\Projects\WebApplication2\WebApplication2\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\USUARIO\Documents\Visual Studio 2015\Projects\WebApplication2\WebApplication2\bin\Microsoft.Web.Infrastructure.dll
 C:\Users\USUARIO\Documents\Visual Studio 2015\Projects\WebApplication2\WebApplication2\bin\System.Web.Helpers.dll
@@ -54,6 +55,7 @@ C:\Users\USUARIO\Documents\Visual Studio 2015\Projects\WebApplication2\WebApplic
 C:\Users\USUARIO\Documents\Visual Studio 2015\Projects\WebApplication2\WebApplication2\bin\System.Web.Webpages.Deployment.dll
 C:\Users\USUARIO\Documents\Visual Studio 2015\Projects\WebApplication2\WebApplication2\bin\System.Web.Webpages.dll
 C:\Users\USUARIO\Documents\Visual Studio 2015\Projects\WebApplication2\WebApplication2\bin\System.Web.Webpages.Razor.dll
+C:\Users\USUARIO\Documents\Visual Studio 2015\Projects\WebApplication2\WebApplication2\bin\EntityFramework.xml
 C:\Users\USUARIO\Documents\Visual Studio 2015\Projects\WebApplication2\WebApplication2\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\USUARIO\Documents\Visual Studio 2015\Projects\WebApplication2\WebApplication2\bin\System.Web.Razor.xml
 C:\Users\USUARIO\Documents\Visual Studio 2015\Projects\WebApplication2\WebApplication2\bin\System.Web.Webpages.xml
@@ -61,78 +63,6 @@ C:\Users\USUARIO\Documents\Visual Studio 2015\Projects\WebApplication2\WebApplic
 C:\Users\USUARIO\Documents\Visual Studio 2015\Projects\WebApplication2\WebApplication2\bin\System.Web.Webpages.Razor.xml
 C:\Users\USUARIO\Documents\Visual Studio 2015\Projects\WebApplication2\WebApplication2\bin\System.Web.Helpers.xml
 C:\Users\USUARIO\Documents\Visual Studio 2015\Projects\WebApplication2\WebApplication2\bin\System.Web.Mvc.xml
-C:\Users\USUARIO\Documents\Visual Studio 2015\Projects\WebApplication2\WebApplication2\obj\Debug\Kidscoin.csprojResolveAssemblyReference.cache
 C:\Users\USUARIO\Documents\Visual Studio 2015\Projects\WebApplication2\WebApplication2\obj\Debug\WebApplication2.dll
 C:\Users\USUARIO\Documents\Visual Studio 2015\Projects\WebApplication2\WebApplication2\obj\Debug\WebApplication2.pdb
-C:\Users\USUARIO\Documents\Visual Studio 2015\Projects\WebApplication2\WebApplication2\bin\EntityFramework.dll
-C:\Users\USUARIO\Documents\Visual Studio 2015\Projects\WebApplication2\WebApplication2\bin\EntityFramework.xml
-F:\KidsCoin\WebApplication2\bin\roslyn\csc.exe
-F:\KidsCoin\WebApplication2\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-F:\KidsCoin\WebApplication2\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
-F:\KidsCoin\WebApplication2\bin\roslyn\Microsoft.CodeAnalysis.dll
-F:\KidsCoin\WebApplication2\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
-F:\KidsCoin\WebApplication2\bin\roslyn\Microsoft.CSharp.Core.targets
-F:\KidsCoin\WebApplication2\bin\roslyn\Microsoft.VisualBasic.Core.targets
-F:\KidsCoin\WebApplication2\bin\roslyn\System.Collections.Immutable.dll
-F:\KidsCoin\WebApplication2\bin\roslyn\System.Reflection.Metadata.dll
-F:\KidsCoin\WebApplication2\bin\roslyn\vbc.exe
-F:\KidsCoin\WebApplication2\bin\roslyn\VBCSCompiler.exe
-F:\KidsCoin\WebApplication2\bin\roslyn\VBCSCompiler.exe.config
-F:\KidsCoin\WebApplication2\bin\WebApplication2.dll.config
-F:\KidsCoin\WebApplication2\bin\WebApplication2.dll
-F:\KidsCoin\WebApplication2\bin\WebApplication2.pdb
-F:\KidsCoin\WebApplication2\bin\EntityFramework.dll
-F:\KidsCoin\WebApplication2\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-F:\KidsCoin\WebApplication2\bin\Microsoft.Web.Infrastructure.dll
-F:\KidsCoin\WebApplication2\bin\System.Web.Helpers.dll
-F:\KidsCoin\WebApplication2\bin\System.Web.Mvc.dll
-F:\KidsCoin\WebApplication2\bin\System.Web.Razor.dll
-F:\KidsCoin\WebApplication2\bin\System.Web.Webpages.Deployment.dll
-F:\KidsCoin\WebApplication2\bin\System.Web.Webpages.dll
-F:\KidsCoin\WebApplication2\bin\System.Web.Webpages.Razor.dll
-F:\KidsCoin\WebApplication2\bin\EntityFramework.xml
-F:\KidsCoin\WebApplication2\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-F:\KidsCoin\WebApplication2\bin\System.Web.Razor.xml
-F:\KidsCoin\WebApplication2\bin\System.Web.Webpages.xml
-F:\KidsCoin\WebApplication2\bin\System.Web.Webpages.Deployment.xml
-F:\KidsCoin\WebApplication2\bin\System.Web.Webpages.Razor.xml
-F:\KidsCoin\WebApplication2\bin\System.Web.Helpers.xml
-F:\KidsCoin\WebApplication2\bin\System.Web.Mvc.xml
-F:\KidsCoin\WebApplication2\obj\Debug\Kidscoin.csprojResolveAssemblyReference.cache
-F:\KidsCoin\WebApplication2\obj\Debug\WebApplication2.dll
-F:\KidsCoin\WebApplication2\obj\Debug\WebApplication2.pdb
-E:\KidsCoin\WebApplication2\bin\roslyn\csc.exe
-E:\KidsCoin\WebApplication2\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-E:\KidsCoin\WebApplication2\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
-E:\KidsCoin\WebApplication2\bin\roslyn\Microsoft.CodeAnalysis.dll
-E:\KidsCoin\WebApplication2\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
-E:\KidsCoin\WebApplication2\bin\roslyn\Microsoft.CSharp.Core.targets
-E:\KidsCoin\WebApplication2\bin\roslyn\Microsoft.VisualBasic.Core.targets
-E:\KidsCoin\WebApplication2\bin\roslyn\System.Collections.Immutable.dll
-E:\KidsCoin\WebApplication2\bin\roslyn\System.Reflection.Metadata.dll
-E:\KidsCoin\WebApplication2\bin\roslyn\vbc.exe
-E:\KidsCoin\WebApplication2\bin\roslyn\VBCSCompiler.exe
-E:\KidsCoin\WebApplication2\bin\roslyn\VBCSCompiler.exe.config
-E:\KidsCoin\WebApplication2\bin\WebApplication2.dll.config
-E:\KidsCoin\WebApplication2\bin\WebApplication2.dll
-E:\KidsCoin\WebApplication2\bin\WebApplication2.pdb
-E:\KidsCoin\WebApplication2\bin\EntityFramework.dll
-E:\KidsCoin\WebApplication2\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-E:\KidsCoin\WebApplication2\bin\Microsoft.Web.Infrastructure.dll
-E:\KidsCoin\WebApplication2\bin\System.Web.Helpers.dll
-E:\KidsCoin\WebApplication2\bin\System.Web.Mvc.dll
-E:\KidsCoin\WebApplication2\bin\System.Web.Razor.dll
-E:\KidsCoin\WebApplication2\bin\System.Web.Webpages.Deployment.dll
-E:\KidsCoin\WebApplication2\bin\System.Web.Webpages.dll
-E:\KidsCoin\WebApplication2\bin\System.Web.Webpages.Razor.dll
-E:\KidsCoin\WebApplication2\bin\EntityFramework.xml
-E:\KidsCoin\WebApplication2\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-E:\KidsCoin\WebApplication2\bin\System.Web.Razor.xml
-E:\KidsCoin\WebApplication2\bin\System.Web.Webpages.xml
-E:\KidsCoin\WebApplication2\bin\System.Web.Webpages.Deployment.xml
-E:\KidsCoin\WebApplication2\bin\System.Web.Webpages.Razor.xml
-E:\KidsCoin\WebApplication2\bin\System.Web.Helpers.xml
-E:\KidsCoin\WebApplication2\bin\System.Web.Mvc.xml
-E:\KidsCoin\WebApplication2\obj\Debug\Kidscoin.csprojResolveAssemblyReference.cache
-E:\KidsCoin\WebApplication2\obj\Debug\WebApplication2.dll
-E:\KidsCoin\WebApplication2\obj\Debug\WebApplication2.pdb
+C:\Users\USUARIO\Documents\Visual Studio 2015\Projects\WebApplication2\WebApplication2\obj\Debug\Kidscoin.csprojResolveAssemblyReference.cache

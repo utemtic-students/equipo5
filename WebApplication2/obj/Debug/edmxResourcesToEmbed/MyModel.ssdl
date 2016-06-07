@@ -9,6 +9,7 @@
     <Property Name="Password" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="FirstName" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="LastNane" Type="varchar" MaxLength="50" />
+    <Property Name="Area" Type="varchar" MaxLength="50" />
     <Property Name="EmailID" Type="varchar" MaxLength="200" />
   </EntityType>
   <EntityContainer Name="MyDatabaseModelStoreContainer">

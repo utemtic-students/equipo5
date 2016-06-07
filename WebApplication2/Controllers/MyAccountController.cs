@@ -24,12 +24,18 @@ namespace WebApplication2.Controllers
                 if (user != null)
                 {
                     FormsAuthentication.SetAuthCookie(user.Username, l.RememberMe);
-                    if (Url.IsLocalUrl(ReturnUrl))
+                    if (user.Area=="cafeteria")
                     {
-                        return Redirect(ReturnUrl);
-                    }else
+                        return RedirectToAction("Cafeteria", "HOme");
+                        
+                    }
+                    if (user.Area == "servicios_escolares")
                     {
-                        return RedirectToAction("MyProfile", "Home");
+                        return RedirectToAction("Servicios", "HOme");
+                    }
+                    if (user.Area == "padres")
+                    {
+                        return RedirectToAction("Padres", "HOme");
                     }
                 }
             }
