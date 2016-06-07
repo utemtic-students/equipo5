@@ -20,7 +20,7 @@ namespace WebApplication2.Controllers
         {
             using (MyDatabaseEntities dc = new MyDatabaseEntities())
             {
-                var user = dc.Users.Where(a => a.Username.Equals(l.Username) && a.Password.Equals(l.Password) && a.Area.Equals("cafeteria")).FirstOrDefault();
+                var user = dc.Users.Where(a => a.Username.Equals(l.Username) && a.Password.Equals(l.Password)).FirstOrDefault();
                 if (user != null)
                 {
                     FormsAuthentication.SetAuthCookie(user.Username, l.RememberMe);
@@ -28,9 +28,14 @@ namespace WebApplication2.Controllers
                     {
                         return RedirectToAction("Cafeteria", "HOme");
                         
-                    }else
+                    }
+                    if (user.Area == "servicios_escolares")
                     {
-                        return Redirect(ReturnUrl);
+                        return RedirectToAction("Servicios", "HOme");
+                    }
+                    if (user.Area == "padres")
+                    {
+                        return RedirectToAction("Padres", "HOme");
                     }
                 }
             }
