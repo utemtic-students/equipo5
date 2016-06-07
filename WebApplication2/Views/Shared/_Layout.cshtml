@@ -31,8 +31,7 @@
 
         //<li>@Html.ActionLink("Cafeteria", "Cafeteria", "Home")</li>
         //<li>@Html.ActionLink("Inicio", "Index", "Home")</li>
-        
-
+        FormsAuthentication.SignOut();
         if (Request.IsAuthenticated)
         {
 
