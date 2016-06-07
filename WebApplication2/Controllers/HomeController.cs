@@ -8,7 +8,7 @@ namespace WebApplication2.Controllers
 {
     public class HomeController : Controller
     {
-        [AllowAnonymous] // Esto es para usuarios sin registro
+        [AllowAnonymous] // Esto es para usuarios sin registro, la página a la que accederan todos.
        public ActionResult Index()
         {
             return View();
