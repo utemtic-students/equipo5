@@ -34,12 +34,17 @@
         FormsAuthentication.SignOut();
         if (Request.IsAuthenticated)
         {
+            if (Request.FilePath.Contains("Servicios"))
+            {
+            <li>@Html.ActionLink("Registro", "Registro", "Home")</li>
+          
 
+            }
             using (Html.BeginForm("Logout", "MyAccount", FormMethod.Post, new { id = "logoutform" }))
             {
                     <a href="javascript:document.getElementById('logoutform').submit()">Cerrar sesión</a>
                 }
-            }else
+         }else
             {
                 @Html.ActionLink("Iniciar sesión", "Login", "MyAccount")
             }

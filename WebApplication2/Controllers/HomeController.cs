@@ -19,12 +19,7 @@ namespace WebApplication2.Controllers
         {
             return View();
         }
-        [Authorize]
-        public ActionResult Servicios()
-        {
-            return View();
-        }
-        
+      
         [Authorize]
         public ActionResult Padres()
         {
