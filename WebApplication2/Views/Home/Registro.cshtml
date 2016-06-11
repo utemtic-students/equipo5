@@ -3,5 +3,49 @@
     ViewBag.Title = "Registro";
 }
 
-<h2>Registro</h2>
+<!DOCTYPE html>
+
+
+
+
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+    <style>
+        .menu {
+            list-style: none;
+            float: right;
+        }
+
+            .menu li {
+                float: left;
+            }
+
+                .menu li a {
+                    padding: 5px;
+                    margin-right: 2px;
+                    background-color: #f3f3f3;
+                }
+    </style>
+
+    <title></title>
+</head>
+
+<body>
+    <div>
+        <form action="DisplayRegistro" method="post">
+            Nombre: <input type="text" name="name" /><br />
+            Apellido: <input type="text" name="apellido" /><br />
+            Grupo: <input type="text" name="grupo" /><br />
+            <input type="submit" value="Guardar"/>
+        </form>
+    </div>
+
+</body>
+</html>
 
