@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Eduardo Hernández">
+    <meta name="description" content="KidsCoin" />
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/Plantilla/")css/reset.css">
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/Plantilla/")css/fancybox-thumbs.css">
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/Plantilla/")css/fancybox-buttons.css">
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/Plantilla/")css/fancybox.css">
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/Plantilla/")css/animate.css">
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/Plantilla/")css/main.css">
+
+    <script type="text/javascript" src="@Url.Content("~/Content/Plantilla/")js/jquery.js"></script>
+    <script type="text/javascript" src="@Url.Content("~/Content/Plantilla/")js/fancybox.js"></script>
+    <script type="text/javascript" src="@Url.Content("~/Content/Plantilla/")js/fancybox-buttons.js"></script>
+    <script type="text/javascript" src="@Url.Content("~/Content/Plantilla/")js/fancybox-media.js"></script>
+    <script type="text/javascript" src="@Url.Content("~/Content/Plantilla/")js/fancybox-thumbs.js"></script>
+    <script type="text/javascript" src="@Url.Content("~/Content/Plantilla/")js/wow.js"></script>
+    <script type="text/javascript" src="@Url.Content("~/Content/Plantilla/")js/main.js"></script>
+
+</head>
+<body>
+    <section class="billboard dark">
+        <header class="wrapper dark">
+            <a href="#"><img class="logo" src="img/logo_dark.png" alt="" /></a>
+            <nav>
+                <ul>
+                    @{
+
+                        <li>@Html.ActionLink("Inicio", "Index", "Home")</li>
+                        if (Request.IsAuthenticated)
+                        {
+                            if (Request.FilePath.Contains("Cafeteria"))
+                            {
+                                <li>@Html.ActionLink("Reporte de ventas", "ReporteVentas", "Cafeteria")</li>
+                            }
+
+                            using (Html.BeginForm("Logout", "MyAccount", FormMethod.Post, new { id = "logoutform" }))
+                            {
+                                <li><a href="javascript:document.getElementById('logoutform').submit()">Cerrar sesión</a></li>
+                            }
+                        }
+                        else
+                        {
+                            <li>@Html.ActionLink("Iniciar sesión", "Login", "MyAccount")</li>
+                        }
+                    }
+                </ul>
+            </nav>
+        </header>
+
+        <div class="caption dark animated wow fadeInDown clearfix">
+            <h1>Bienvenido al sistema virtual KidsCoin</h1>
+            <p>Inicie sesión para utilizar el sistema.</p>
+            <hr>
+        </div>
+        <div class="shadow"></div>
+    </section><!--  End billboard  -->
+
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>

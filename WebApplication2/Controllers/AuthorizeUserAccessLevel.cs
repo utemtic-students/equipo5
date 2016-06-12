@@ -15,7 +15,6 @@ namespace System.Web.Mvc
         {
             MyDatabaseEntities dc = new MyDatabaseEntities();
 
-
             var isAutorized = base.AuthorizeCore(httpContext);
             if (!isAutorized)
             {

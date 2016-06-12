@@ -102,6 +102,14 @@
     </Content>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Cafeteria.css" />
+    <Content Include="Content\Plantilla\img\billboard2.jpg" />
+    <Content Include="Content\Plantilla\img\icon1.png" />
+    <Content Include="Content\Plantilla\img\icon2.png" />
+    <Content Include="Content\Plantilla\img\icon3.png" />
+    <Content Include="Content\Plantilla\img\KidsCoin.jpg" />
+    <Content Include="Content\Plantilla\img\paypal.png" />
+    <Content Include="Content\Plantilla\img\seguridad.png" />
     <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -130,6 +138,9 @@
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Views\FondosCafeteria\371656.jpg" />
+    <Content Include="Views\FondosCafeteria\coffee-art-iphone-wallpaper-2560x1440.jpg" />
+    <Content Include="Views\FondosCafeteria\tcback1.jpg" />
     <Content Include="Web.config" />
     <Content Include="Views\MyAccount\Login.cshtml" />
   </ItemGroup>
@@ -168,7 +179,6 @@
     <Content Include="packages.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
@@ -177,6 +187,8 @@
     <Content Include="Views\Home\Padres.cshtml" />
     <Content Include="Views\Cafeteria\Cafeteria.cshtml" />
     <Content Include="Views\Cafeteria\ReporteVentas.cshtml" />
+    <Content Include="Views\Shared\_myplantilla.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -187,7 +199,11 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Content\Plantilla\css\" />
+    <Folder Include="Content\Plantilla\fonts\" />
+    <Folder Include="Content\Plantilla\js\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
