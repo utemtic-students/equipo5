@@ -5,3 +5,26 @@
 <h3>Bienvenido(a) @(Request.IsAuthenticated ? HttpContext.Current.User.Identity.Name : "Guest") - Esta es la sección de cafetería.</h3>
 
 
+<div id="reader" style="width:300px; height:250px">
+
+</div>
+<p>
+    Datos del QR: <input id="txtCodigo" type="text" name="" />
+</p>
+
+<script>
+    $(document).ready(function () {
+        $('#reader').html5_qrcode(function (data) {
+            $('#txtCodigo').html(data);
+        },
+            function (error) {
+                $('#read_error').html(error);
+            }, function (videoError) {
+                //$('#vid_error').html(videoError);
+                alert("No hay cámara");
+            }
+        );
+    });
+
+</script>
+
