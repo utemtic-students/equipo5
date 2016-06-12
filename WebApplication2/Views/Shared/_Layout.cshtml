@@ -26,24 +26,26 @@
 <body>
     <ul class="menu">
       
-        <li>
     @{
-
+        
         //<li>@Html.ActionLink("Cafeteria", "Cafeteria", "Home")</li>
-        //<li>@Html.ActionLink("Inicio", "Index", "Home")</li>
-        FormsAuthentication.SignOut();
+        <li>@Html.ActionLink("Inicio", "Index", "Home")</li>
         if (Request.IsAuthenticated)
         {
+            if (Request.FilePath.Contains("Cafeteria"))
+            {
+                @Html.ActionLink("Reporte de ventas", "ReporteVentas", "Cafeteria")
+            }
 
             using (Html.BeginForm("Logout", "MyAccount", FormMethod.Post, new { id = "logoutform" }))
             {
-                    <a href="javascript:document.getElementById('logoutform').submit()">Cerrar sesión</a>
+                    <li><a href="javascript:document.getElementById('logoutform').submit()">Cerrar sesión</a></li>
                 }
             }else
             {
                 @Html.ActionLink("Iniciar sesión", "Login", "MyAccount")
             }
-        }</li>
+        }
     </ul>
                <div style="height:1px;clear:both;"></div>
             

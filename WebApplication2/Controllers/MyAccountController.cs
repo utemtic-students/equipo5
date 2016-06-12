@@ -26,7 +26,7 @@ namespace WebApplication2.Controllers
                     FormsAuthentication.SetAuthCookie(user.Username, l.RememberMe);
                     if (user.Area=="cafeteria")
                     {
-                        return RedirectToAction("Cafeteria", "HOme");
+                        return RedirectToAction("Cafeteria", "Cafeteria");
                         
                     }
                     if (user.Area == "servicios_escolares")

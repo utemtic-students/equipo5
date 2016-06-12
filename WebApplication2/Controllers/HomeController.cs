@@ -4,28 +4,25 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
+
 namespace WebApplication2.Controllers
 {
     public class HomeController : Controller
     {
         [AllowAnonymous] // Esto es para usuarios sin registro, la página a la que accederan todos.
-       public ActionResult Index()
+        public ActionResult Index()
         {
             return View();
         }
 
-        [Authorize] // Esto es para usuarios autorizados
-        public ActionResult Cafeteria()
-        {
-            return View();
-        }
-        [Authorize]
+
+        [AuthorizeUserAccessLevel(UserRole ="servicios_escolares")]
         public ActionResult Servicios()
         {
             return View();
         }
         
-        [Authorize]
+        [AuthorizeUserAccessLevel(UserRole = "padres")]
         public ActionResult Padres()
         {
             return View();
