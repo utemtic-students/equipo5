@@ -6,7 +6,7 @@ to carry cash.
 
 Eduardo Hernández.
 
-Jhonana López.
+Jhoana López.
 
 Diana Vargas.
 
