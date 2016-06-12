@@ -103,13 +103,24 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Cafeteria.css" />
+    <Content Include="Content\Plantilla\css\animate.css" />
+    <Content Include="Content\Plantilla\css\fancybox-buttons.css" />
+    <Content Include="Content\Plantilla\css\fancybox-thumbs.css" />
+    <Content Include="Content\Plantilla\css\fancybox.css" />
+    <Content Include="Content\Plantilla\css\cafeteria.css" />
+    <Content Include="Content\Plantilla\css\main.css" />
+    <Content Include="Content\Plantilla\css\reset.css" />
     <Content Include="Content\Plantilla\img\billboard2.jpg" />
+    <Content Include="Content\Plantilla\img\cafeteria-logo.jpg" />
+    <Content Include="Content\Plantilla\img\fondo_restaurante_02.jpg" />
     <Content Include="Content\Plantilla\img\icon1.png" />
     <Content Include="Content\Plantilla\img\icon2.png" />
     <Content Include="Content\Plantilla\img\icon3.png" />
     <Content Include="Content\Plantilla\img\KidsCoin.jpg" />
     <Content Include="Content\Plantilla\img\paypal.png" />
+    <Content Include="Content\Plantilla\img\pulsera.jpg" />
     <Content Include="Content\Plantilla\img\seguridad.png" />
+    <Content Include="Content\Plantilla\img\tcback1.jpg" />
     <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -189,6 +200,7 @@
     <Content Include="Views\Cafeteria\ReporteVentas.cshtml" />
     <Content Include="Views\Shared\_myplantilla.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\_plantillaCafetería.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -200,7 +212,6 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Content\Plantilla\css\" />
     <Folder Include="Content\Plantilla\fonts\" />
     <Folder Include="Content\Plantilla\js\" />
   </ItemGroup>
