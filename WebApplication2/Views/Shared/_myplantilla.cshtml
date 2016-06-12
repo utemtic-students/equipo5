@@ -30,7 +30,7 @@
             <nav>
                 <ul>
                     @{
-
+                        <li>Hola, @(Request.IsAuthenticated ? HttpContext.Current.User.Identity.Name : "Invitado")</li>
                         <li>@Html.ActionLink("Inicio", "Index", "Home")</li>
                         if (Request.IsAuthenticated)
                         {
