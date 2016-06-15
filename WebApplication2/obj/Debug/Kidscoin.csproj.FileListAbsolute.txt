@@ -101,8 +101,9 @@ C:\Users\USUARIO\Documents\GitHub\kidscoin\WebApplication2\bin\System.Web.Mvc.xm
 C:\Users\USUARIO\Documents\GitHub\kidscoin\WebApplication2\obj\Debug\WebApplication2.dll
 C:\Users\USUARIO\Documents\GitHub\kidscoin\WebApplication2\obj\Debug\WebApplication2.pdb
 <<<<<<< HEAD
-C:\Users\USUARIO\Documents\GitHub\kidscoin\WebApplication2\obj\Debug\Kidscoin.csprojResolveAssemblyReference.cache
 =======
+C:\Users\USUARIO\Documents\GitHub\kidscoin\WebApplication2\obj\Debug\Kidscoin.csprojResolveAssemblyReference.cache
+>>>>>>> refs/remotes/origin/master
 C:\Users\eduar_000\Documents\GitHub\kidscoin\WebApplication2\bin\roslyn\csc.exe
 C:\Users\eduar_000\Documents\GitHub\kidscoin\WebApplication2\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
 C:\Users\eduar_000\Documents\GitHub\kidscoin\WebApplication2\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
@@ -135,7 +136,8 @@ C:\Users\eduar_000\Documents\GitHub\kidscoin\WebApplication2\bin\System.Web.Webp
 C:\Users\eduar_000\Documents\GitHub\kidscoin\WebApplication2\bin\System.Web.Webpages.Razor.xml
 C:\Users\eduar_000\Documents\GitHub\kidscoin\WebApplication2\bin\System.Web.Helpers.xml
 C:\Users\eduar_000\Documents\GitHub\kidscoin\WebApplication2\bin\System.Web.Mvc.xml
-C:\Users\eduar_000\Documents\GitHub\kidscoin\WebApplication2\obj\Debug\Kidscoin.csprojResolveAssemblyReference.cache
 C:\Users\eduar_000\Documents\GitHub\kidscoin\WebApplication2\obj\Debug\WebApplication2.dll
 C:\Users\eduar_000\Documents\GitHub\kidscoin\WebApplication2\obj\Debug\WebApplication2.pdb
+>>>>>>> origin/Cafeteria
+C:\Users\eduar_000\Documents\GitHub\kidscoin\WebApplication2\obj\Debug\Kidscoin.csprojResolveAssemblyReference.cache
 >>>>>>> origin/master
