@@ -100,4 +100,3 @@ C:\Users\USUARIO\Documents\GitHub\kidscoin\WebApplication2\bin\System.Web.Helper
 C:\Users\USUARIO\Documents\GitHub\kidscoin\WebApplication2\bin\System.Web.Mvc.xml
 C:\Users\USUARIO\Documents\GitHub\kidscoin\WebApplication2\obj\Debug\WebApplication2.dll
 C:\Users\USUARIO\Documents\GitHub\kidscoin\WebApplication2\obj\Debug\WebApplication2.pdb
-C:\Users\USUARIO\Documents\GitHub\kidscoin\WebApplication2\obj\Debug\Kidscoin.csprojResolveAssemblyReference.cache
