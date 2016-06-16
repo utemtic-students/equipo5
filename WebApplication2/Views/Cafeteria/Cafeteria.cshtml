@@ -9,7 +9,9 @@
     <div id="reader" style="width:300px; height:250px">
 
     </div>
-    
+
+    <h6>Result</h6>
+    <span id="read" class="text-center"></span>
     <p id="prueba">
         Datos del QR: <input id="txtCodigo" type="text" name="" />
     </p>
@@ -19,7 +21,9 @@
 <script>
     $(document).ready(function () {
         $('#reader').html5_qrcode(function (data) {
-            $('#txtCodigo').html(data);
+            //$('#txtCodigo').html(data);
+            alert(data);
+
         },
             function (error) {
                 $('#read_error').html(error);
