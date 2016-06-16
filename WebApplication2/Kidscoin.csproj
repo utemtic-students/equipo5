@@ -125,6 +125,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="js\html5-qrcode.min.js" />
+    <Content Include="js\jquery-1.9.1.min.js" />
     <Content Include="js\jsqrcode-combined.min.js" />
     <Content Include="MyModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
