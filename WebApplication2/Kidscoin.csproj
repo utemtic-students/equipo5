@@ -43,8 +43,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -52,7 +56,6 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
@@ -121,6 +124,25 @@
     <Content Include="Content\Plantilla\img\pulsera.jpg" />
     <Content Include="Content\Plantilla\img\seguridad.png" />
     <Content Include="Content\Plantilla\img\tcback1.jpg" />
+    <Content Include="Content\SERVCSS\css\animate.css" />
+    <Content Include="Content\SERVCSS\css\cafeteria.css" />
+    <Content Include="Content\SERVCSS\css\fancybox-buttons.css" />
+    <Content Include="Content\SERVCSS\css\fancybox-thumbs.css" />
+    <Content Include="Content\SERVCSS\css\fancybox.css" />
+    <Content Include="Content\SERVCSS\css\main.css" />
+    <Content Include="Content\SERVCSS\css\reset.css" />
+    <Content Include="Content\SERVCSS\Estilo.css" />
+    <Content Include="Content\SERVCSS\img\billboard2.jpg" />
+    <Content Include="Content\SERVCSS\img\cafeteria-logo.jpg" />
+    <Content Include="Content\SERVCSS\img\fondo_restaurante_02.jpg" />
+    <Content Include="Content\SERVCSS\img\icon1.png" />
+    <Content Include="Content\SERVCSS\img\icon2.png" />
+    <Content Include="Content\SERVCSS\img\icon3.png" />
+    <Content Include="Content\SERVCSS\img\KidsCoin.jpg" />
+    <Content Include="Content\SERVCSS\img\paypal.png" />
+    <Content Include="Content\SERVCSS\img\pulsera.jpg" />
+    <Content Include="Content\SERVCSS\img\seguridad.png" />
+    <Content Include="Content\SERVCSS\img\tcback1.jpg" />
     <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -157,14 +179,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AgregarPadres.cs" />
     <Compile Include="Controllers\AuthorizeUserAccessLevel.cs" />
     <Compile Include="Controllers\CafeteriaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MyAccountController.cs" />
+    <Compile Include="Controllers\pruebaController.cs" />
+    <Compile Include="Controllers\ServiciosController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Login.cs" />
+    <Compile Include="Models\Padre.cs" />
     <Compile Include="MyModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -180,6 +206,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>MyModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Padre.cs">
+      <DependentUpon>MyModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="User.cs">
       <DependentUpon>MyModel.tt</DependentUpon>
@@ -194,13 +223,18 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
-    <Content Include="Views\Home\Servicios.cshtml" />
     <Content Include="Views\Home\Padres.cshtml" />
     <Content Include="Views\Cafeteria\Cafeteria.cshtml" />
     <Content Include="Views\Cafeteria\ReporteVentas.cshtml" />
     <Content Include="Views\Shared\_myplantilla.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\_plantillaCafetería.cshtml" />
+    <Content Include="Views\Shared\_PlantillaServicios.cshtml" />
+    <Content Include="Views\Servicios\Servicios.cshtml" />
+    <Content Include="Views\Shared\_PlantillaFormularioServicios.cshtml" />
+    <Content Include="Views\Servicios\Registros.cshtml" />
+    <Content Include="Views\Shared\_FormatoFormularioServicios.cshtml" />
+    <Content Include="Views\Servicios\RegistroPadres.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -214,6 +248,9 @@
   <ItemGroup>
     <Folder Include="Content\Plantilla\fonts\" />
     <Folder Include="Content\Plantilla\js\" />
+    <Folder Include="Content\SERVCSS\fonts\" />
+    <Folder Include="Content\SERVCSS\js\" />
+    <Folder Include="Views\prueba\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

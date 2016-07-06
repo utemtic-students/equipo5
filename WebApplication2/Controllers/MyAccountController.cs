@@ -31,7 +31,7 @@ namespace WebApplication2.Controllers
                     }
                     if (user.Area == "servicios_escolares")
                     {
-                        return RedirectToAction("Servicios", "HOme");
+                        return RedirectToAction("Servicios", "Servicios");
                     }
                     if (user.Area == "padres")
                     {
