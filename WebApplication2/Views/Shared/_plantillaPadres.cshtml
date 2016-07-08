@@ -1,0 +1,90 @@
+﻿
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Eduardo Hernández">
+    <meta name="description" content="KidsCoin" />
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/PlantillaPadres/")css/reset.css">
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/PlantillaPadres/")css/fancybox-thumbs.css">
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/PlantillaPadres/")css/fancybox-buttons.css">
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/PlantillaPadres/")css/fancybox.css">
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/PlantillaPadres/")css/animate.css">
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/PlantillaPadres/")css/padres.css">
+    <link href="@Url.Content("~/Content/PlantillaPadres/")css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="@Url.Content("~/Content/PlantillaPadres/")css/modern-business.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="@Url.Content("~/Content/PlantillaPadres/")font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <script type="text/javascript" src="@Url.Content("~/Content/PlantillaPadres/")js/jquery.js"></script>
+    <script type="text/javascript" src="@Url.Content("~/Content/PlantillaPadres/")js/fancybox.js"></script>
+    <script type="text/javascript" src="@Url.Content("~/Content/PlantillaPadres/")js/fancybox-buttons.js"></script>
+    <script type="text/javascript" src="@Url.Content("~/Content/PlantillaPadres/")js/fancybox-media.js"></script>
+    <script type="text/javascript" src="@Url.Content("~/Content/PlantillaPadres/")js/fancybox-thumbs.js"></script>
+    <script type="text/javascript" src="@Url.Content("~/Content/PlantillaPadres/")js/wow.js"></script>
+    <script type="text/javascript" src="@Url.Content("~/Content/PlantillaPadres/")js/main.js"></script>
+    <script src="~/js/jquery-1.9.1.min.js"></script>
+    <script src="~/js/jsqrcode-combined.min.js"></script>
+    <script src="~/js/html5-qrcode.min.js"></script>
+</head>
+<body>
+    <section class="billboard dark">
+        <header class="wrapper dark">
+            <nav>
+                <ul>
+                    @{
+                        <li>Hola, @(Request.IsAuthenticated ? HttpContext.Current.User.Identity.Name : "Invitado")</li>
+               
+                        <li>@Html.ActionLink("Recargas", "Recargas", "Padres")</li>
+                        <li>@Html.ActionLink("Movimientos", "Movimietos", "Padres")</li>
+                        <li>@Html.ActionLink("Contactanos", "Contactanos", "Padres")</li>
+
+                        if (Request.IsAuthenticated)
+                        {
+                            if (Request.FilePath.Contains("Cafeteria"))
+                            {
+                                <li>@Html.ActionLink("Reporte de ventas", "ReporteVentas", "Cafeteria")</li>
+                            }
+
+                            using (Html.BeginForm("Logout", "MyAccount", FormMethod.Post, new { id = "logoutform" }))
+                            {
+                                <li><a href="javascript:document.getElementById('logoutform').submit()">Cerrar sesión</a></li>
+                            }
+                        }
+                        else
+                        {
+                            <li>@Html.ActionLink("Iniciar sesión", "Login", "MyAccount")</li>
+                        }
+                    }
+                </ul>
+            </nav>
+        </header>
+
+        <div class="caption dark animated wow fadeInDown clearfix">
+            <h1>Bienvenido(a) @(Request.IsAuthenticated ? HttpContext.Current.User.Identity.Name : "Guest") a la sección de padres.</h1>
+            
+            <p>En esta área usted podrá revisar las compras realizadas y recargar las pulseras de sus niños.</p>
+            <hr>
+        </div>
+        <div class="shadow"></div>
+    </section><!--  End billboard  -->
+
+    <div>
+        @RenderBody()
+    </div>
+
+    <!-- jQuery -->
+    <script src="@Url.Content("~/Content/PlantillaPadres/")js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="@Url.Content("~/Content/PlantillaPadres/")js/bootstrap.min.js"></script>
+
+</body>
+</html>
+

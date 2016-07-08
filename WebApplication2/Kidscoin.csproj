@@ -43,8 +43,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -52,7 +56,6 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
@@ -103,6 +106,36 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Cafeteria.css" />
+    <Content Include="Content\PlantillaPadres\css\animate.css" />
+    <Content Include="Content\PlantillaPadres\css\bootstrap.css" />
+    <Content Include="Content\PlantillaPadres\css\bootstrap.min.css" />
+    <Content Include="Content\PlantillaPadres\css\modern-business.css" />
+    <Content Include="Content\PlantillaPadres\css\padres.css" />
+    <Content Include="Content\PlantillaPadres\css\fancybox-buttons.css" />
+    <Content Include="Content\PlantillaPadres\css\fancybox-thumbs.css" />
+    <Content Include="Content\PlantillaPadres\css\fancybox.css" />
+    <Content Include="Content\PlantillaPadres\css\main.css" />
+    <Content Include="Content\PlantillaPadres\css\reset.css" />
+    <Content Include="Content\PlantillaPadres\font-awesome\css\font-awesome.css" />
+    <Content Include="Content\PlantillaPadres\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Content\PlantillaPadres\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\PlantillaPadres\img\billboard2.jpg" />
+    <Content Include="Content\PlantillaPadres\img\cafeteria-logo.jpg" />
+    <Content Include="Content\PlantillaPadres\img\familia.jpg" />
+    <Content Include="Content\PlantillaPadres\img\fondo_restaurante_02.jpg" />
+    <Content Include="Content\PlantillaPadres\img\icon1.png" />
+    <Content Include="Content\PlantillaPadres\img\icon2.png" />
+    <Content Include="Content\PlantillaPadres\img\icon3.png" />
+    <Content Include="Content\PlantillaPadres\img\KidsCoin.jpg" />
+    <Content Include="Content\PlantillaPadres\img\paypal.png" />
+    <Content Include="Content\PlantillaPadres\img\pulsera.jpg" />
+    <Content Include="Content\PlantillaPadres\img\seguridad.png" />
+    <Content Include="Content\PlantillaPadres\img\tcback1.jpg" />
+    <Content Include="Content\PlantillaPadres\js\bootstrap.js" />
+    <Content Include="Content\PlantillaPadres\js\bootstrap.min.js" />
+    <Content Include="Content\PlantillaPadres\js\contact_me.js" />
+    <Content Include="Content\PlantillaPadres\js\jqBootstrapValidation.js" />
+    <Content Include="Content\PlantillaPadres\js\jquery.js" />
     <Content Include="Content\Plantilla\css\animate.css" />
     <Content Include="Content\Plantilla\css\fancybox-buttons.css" />
     <Content Include="Content\Plantilla\css\fancybox-thumbs.css" />
@@ -146,6 +179,36 @@
     <Content Include="MyModel.edmx.diagram">
       <DependentUpon>MyModel.edmx</DependentUpon>
     </Content>
+    <Content Include="Content\PlantillaPadres\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\PlantillaPadres\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\PlantillaPadres\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\PlantillaPadres\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="Content\PlantillaPadres\font-awesome\less\bordered-pulled.less" />
+    <Content Include="Content\PlantillaPadres\font-awesome\less\core.less" />
+    <Content Include="Content\PlantillaPadres\font-awesome\less\fixed-width.less" />
+    <Content Include="Content\PlantillaPadres\font-awesome\less\font-awesome.less" />
+    <Content Include="Content\PlantillaPadres\font-awesome\less\icons.less" />
+    <Content Include="Content\PlantillaPadres\font-awesome\less\larger.less" />
+    <Content Include="Content\PlantillaPadres\font-awesome\less\list.less" />
+    <Content Include="Content\PlantillaPadres\font-awesome\less\mixins.less" />
+    <Content Include="Content\PlantillaPadres\font-awesome\less\path.less" />
+    <Content Include="Content\PlantillaPadres\font-awesome\less\rotated-flipped.less" />
+    <Content Include="Content\PlantillaPadres\font-awesome\less\spinning.less" />
+    <Content Include="Content\PlantillaPadres\font-awesome\less\stacked.less" />
+    <Content Include="Content\PlantillaPadres\font-awesome\less\variables.less" />
+    <Content Include="Content\PlantillaPadres\font-awesome\scss\font-awesome.scss" />
+    <Content Include="Content\PlantillaPadres\font-awesome\scss\_bordered-pulled.scss" />
+    <Content Include="Content\PlantillaPadres\font-awesome\scss\_core.scss" />
+    <Content Include="Content\PlantillaPadres\font-awesome\scss\_fixed-width.scss" />
+    <Content Include="Content\PlantillaPadres\font-awesome\scss\_icons.scss" />
+    <Content Include="Content\PlantillaPadres\font-awesome\scss\_larger.scss" />
+    <Content Include="Content\PlantillaPadres\font-awesome\scss\_list.scss" />
+    <Content Include="Content\PlantillaPadres\font-awesome\scss\_mixins.scss" />
+    <Content Include="Content\PlantillaPadres\font-awesome\scss\_path.scss" />
+    <Content Include="Content\PlantillaPadres\font-awesome\scss\_rotated-flipped.scss" />
+    <Content Include="Content\PlantillaPadres\font-awesome\scss\_spinning.scss" />
+    <Content Include="Content\PlantillaPadres\font-awesome\scss\_stacked.scss" />
+    <Content Include="Content\PlantillaPadres\font-awesome\scss\_variables.scss" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -162,6 +225,7 @@
     <Compile Include="Controllers\CafeteriaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MyAccountController.cs" />
+    <Compile Include="Controllers\PadresController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -202,6 +266,11 @@
     <Content Include="Views\Shared\_myplantilla.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\_plantillaCafetería.cshtml" />
+    <Content Include="Views\Shared\_plantillaPadres.cshtml" />
+    <Content Include="Views\Padres\Index.cshtml" />
+    <Content Include="Views\Padres\Movimietos.cshtml" />
+    <Content Include="Views\Padres\Recargas.cshtml" />
+    <Content Include="Views\Padres\Contactanos.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -213,6 +282,7 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Content\PlantillaPadres\fonts\" />
     <Folder Include="Content\Plantilla\fonts\" />
     <Folder Include="Content\Plantilla\js\" />
   </ItemGroup>

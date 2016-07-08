@@ -1,0 +1,116 @@
+﻿
+@{
+    ViewBag.Title = "Recargas";
+    Layout = "~/Views/Shared/_plantillaPadres.cshtml";
+}
+
+ <!-- Page Content -->
+<div class="container">
+
+    <!-- Service Tabs -->
+    <div class="row">
+        <div class="col-lg-12">
+            <h2 class="page-header">Depositar </h2>
+        </div>
+        <div class="col-lg-12">
+
+            <ul id="myTab" class="nav nav-tabs nav-justified">
+                <li class="active">
+                    <a href="#service-one" data-toggle="tab"><i class="glyphicon glyphicon-user"></i> Paso 1 - Seleccion de cuenta </a>
+                </li>
+                <li class="">
+                    <a href="#service-two" data-toggle="tab"><i class="glyphicon glyphicon-usd"></i> Paso 2 - Monto a depositar</a>
+                </li>
+                <li class="">
+                    <a href="#service-three" data-toggle="tab"><i class="glyphicon glyphicon-credit-card"></i> Paso 3 - Tarjeta</a>
+                </li>
+                <li class="">
+                    <a href="#service-four" data-toggle="tab"><i class="glyphicon glyphicon-ok-circle"></i> paso 4 - Confirmar deposito </a>
+                </li>
+            </ul>
+
+            <div id="myTabContent" class="tab-content">
+                <div class="tab-pane fade active in" id="service-one">
+                    <h4>Selecciona un usuario </h4>
+                    <p>
+                        Selecciona en la lista de abajo el nombre del alumno  al que le deseas depositar.
+                    </p>
+                    <p>
+                        <select>
+                            <option value="volvo">Maria Lopez </option>
+                            <option value="saab">Luis Lopez</option>
+
+                        </select>
+                    </p>
+                    <p>
+                        <button type="button" class="btn btn-primary">Confirmar</button>
+                    </p>
+
+                </div>
+                <div class="tab-pane fade" id="service-two">
+                    <h4>Monto a depositar </h4>
+                    <p>Ingresa la cantidad de dinero que deseas depositar a la cuenta </p>
+                    <p>
+                        Monto $<input type="textBox"></input>
+
+                    </p>
+                    <p>
+                        <button type="button" class="btn btn-primary">Confirmar</button>
+                    </p>
+                </div>
+                <div class="tab-pane fade" id="service-three">
+                    <h4>Tarjeta </h4>
+                    <p>Ingresa los datos de su tarjeta en el formulario de abajo para realizar el pago </p>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                        <input type="hidden" name="cmd" value="_s-xclick">
+                        <input type="hidden" name="hosted_button_id" value="FYS25NTPJ2Q6L">
+                        <table>
+                            <tr><td><input type="hidden" name="on0" value="Recarga">Recarga</td></tr>
+                            <tr>
+                                <td>
+                                    <select name="os0">
+                                        <option value="Opción 1">Opción 1 $1.00 MXN</option>
+                                        <option value="Opción 2">Opción 2 $2.00 MXN</option>
+                                        <option value="Opción 3">Opción 3 $3.00 MXN</option>
+                                    </select>
+                                </td>
+                            </tr>
+                        </table>
+                        <input type="hidden" name="currency_code" value="MXN">
+                        <input type="image" src="https://www.paypalobjects.com/es_XC/MX/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal, la forma más segura y rápida de pagar en línea.">
+                        <img alt="" border="0" src="https://www.paypalobjects.com/es_XC/i/scr/pixel.gif" width="1" height="1">
+                    </form>
+                </div>
+
+                <div class="tab-pane fade" id="service-four">
+                    <h4>Confirmar deposito </h4>
+                    <p>Antes de proceder a realizar tu pago revisa cuidadosamente la informacion antes proporcionada. </p>
+                    <p>
+                        <button type="button" class="btn btn-primary">Confirmar </button>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+        <div class="row">
+            <div class="col-lg-12">
+                <p>Copyright &copy; Your Website 2014</p>
+            </div>
+        </div>
+    </footer>
+
+</div>
+<!-- /.container -->
+<!-- jQuery -->
+<script src="js/jquery.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+

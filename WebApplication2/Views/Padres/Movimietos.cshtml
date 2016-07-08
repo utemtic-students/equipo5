@@ -1,0 +1,11 @@
+﻿
+@{
+    ViewBag.Title = "Movimietos";
+    Layout = "~/Views/Shared/_plantillaPadres.cshtml";
+}
+
+<h3>Bienvenido(a) @(Request.IsAuthenticated ? HttpContext.Current.User.Identity.Name : "Guest") - Esta es la sección de padres.</h3>
+<select id="Select1">
+    <option></option>
+
+</select>
