@@ -5,6 +5,15 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="MyDatabaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Alumnos">
+          <Key>
+            <PropertyRef Name="Id_Hijo" />
+          </Key>
+          <Property Name="Id_Hijo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nombre" Type="nchar" MaxLength="10" />
+          <Property Name="Apellido" Type="nchar" MaxLength="10" />
+          <Property Name="Id_Padre" Type="int" />
+        </EntityType>
         <EntityType Name="Padres">
           <Key>
             <PropertyRef Name="Id" />
@@ -27,6 +36,18 @@
           <Property Name="Area" Type="varchar" MaxLength="50" />
           <Property Name="EmailID" Type="varchar" MaxLength="200" />
         </EntityType>
+        <Association Name="FK_Alumno_ToPadres">
+          <End Role="Padres" Type="Self.Padres" Multiplicity="0..1" />
+          <End Role="Alumnos" Type="Self.Alumnos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Padres">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Alumnos">
+              <PropertyRef Name="Id_Padre" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Function Name="agregarpadres" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="Nombre" Type="varchar" Mode="In" />
           <Parameter Name="Apellido" Type="varchar" Mode="In" />
@@ -34,8 +55,13 @@
           <Parameter Name="Contrasenia" Type="varchar" Mode="In" />
         </Function>
         <EntityContainer Name="MyDatabaseModelStoreContainer">
+          <EntitySet Name="Alumnos" EntityType="Self.Alumnos" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Padres" EntityType="Self.Padres" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Alumno_ToPadres" Association="Self.FK_Alumno_ToPadres">
+            <End Role="Padres" EntitySet="Padres" />
+            <End Role="Alumnos" EntitySet="Alumnos" />
+          </AssociationSet>
         </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
@@ -62,6 +88,11 @@
             <Parameter Name="Usuario" Mode="In" Type="String" />
             <Parameter Name="Contrasenia" Mode="In" Type="String" />
           </FunctionImport>
+          <EntitySet Name="Alumnos" EntityType="MyDatabaseModel.Alumno" />
+          <AssociationSet Name="FK_Alumno_ToPadres" Association="MyDatabaseModel.FK_Alumno_ToPadres">
+            <End Role="Padre" EntitySet="Padres" />
+            <End Role="Alumno" EntitySet="Alumnos" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="Padre">
           <Key>
@@ -72,7 +103,30 @@
           <Property Name="Apellido" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Usuario" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Contrasenia" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Alumnos" Relationship="MyDatabaseModel.FK_Alumno_ToPadres" FromRole="Padre" ToRole="Alumno" />
         </EntityType>
+        <EntityType Name="Alumno">
+          <Key>
+            <PropertyRef Name="Id_Hijo" />
+          </Key>
+          <Property Name="Id_Hijo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="Apellido" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="Id_Padre" Type="Int32" />
+          <NavigationProperty Name="Padre" Relationship="MyDatabaseModel.FK_Alumno_ToPadres" FromRole="Alumno" ToRole="Padre" />
+        </EntityType>
+        <Association Name="FK_Alumno_ToPadres">
+          <End Type="MyDatabaseModel.Padre" Role="Padre" Multiplicity="0..1" />
+          <End Type="MyDatabaseModel.Alumno" Role="Alumno" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Padre">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Alumno">
+              <PropertyRef Name="Id_Padre" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -104,6 +158,16 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <FunctionImportMapping FunctionImportName="agregarpadres" FunctionName="MyDatabaseModel.Store.agregarpadres" />
+          <EntitySetMapping Name="Alumnos">
+            <EntityTypeMapping TypeName="MyDatabaseModel.Alumno">
+              <MappingFragment StoreEntitySet="Alumnos">
+                <ScalarProperty Name="Id_Padre" ColumnName="Id_Padre" />
+                <ScalarProperty Name="Apellido" ColumnName="Apellido" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Id_Hijo" ColumnName="Id_Hijo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

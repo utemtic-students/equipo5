@@ -40,6 +40,18 @@ namespace WebApplication2.Controllers
             return RedirectToAction("servicios");
         }
 
+        [HttpGet]
+        public ActionResult RegistroAlumnos()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Registro_Alumno(FormCollection formCollection)
+        {
+            return View();
+        }
+
         public ActionResult Crud(int id = 0)
         {
             return View();

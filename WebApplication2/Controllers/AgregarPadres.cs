@@ -20,6 +20,7 @@ namespace WebApplication2.Controllers
 
                 dc.Padres.Add(padre);
                 dc.SaveChanges();
+                
                
             }
         }

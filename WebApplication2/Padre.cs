@@ -14,10 +14,17 @@ namespace WebApplication2
     
     public partial class Padre
     {
+        public Padre()
+        {
+            this.Alumnos = new HashSet<Alumno>();
+        }
+    
         public int Id { get; set; }
         public string Nombre { get; set; }
         public string Apellido { get; set; }
         public string Usuario { get; set; }
         public string Contrasenia { get; set; }
+    
+        public virtual ICollection<Alumno> Alumnos { get; set; }
     }
 }

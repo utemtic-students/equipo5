@@ -11,10 +11,11 @@ namespace WebApplication2
 {
     using System;
     using System.Data.Entity;
-    using System.Data.Entity.Core.Objects;
     using System.Data.Entity.Infrastructure;
+    using System.Data.Objects;
+    using System.Data.Objects.DataClasses;
     using System.Linq;
-
+    
     public partial class MyDatabaseEntities : DbContext
     {
         public MyDatabaseEntities()
@@ -29,6 +30,7 @@ namespace WebApplication2
     
         public DbSet<User> Users { get; set; }
         public DbSet<Padre> Padres { get; set; }
+        public DbSet<Alumno> Alumnos { get; set; }
     
         public virtual int agregarpadres(string nombre, string apellido, string usuario, string contrasenia)
         {

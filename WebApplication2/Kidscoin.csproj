@@ -178,6 +178,9 @@
     <Content Include="Views\MyAccount\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Alumno.cs">
+      <DependentUpon>MyModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AgregarPadres.cs" />
     <Compile Include="Controllers\AuthorizeUserAccessLevel.cs" />

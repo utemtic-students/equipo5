@@ -7,6 +7,8 @@
       <Diagram DiagramId="406bcd25296a4310b608a961a51769f2" Name="Diagram1">
         <EntityTypeShape EntityType="MyDatabaseModel.User" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="MyDatabaseModel.Padre" Width="1.5" PointX="3.625" PointY="1.375" />
+        <EntityTypeShape EntityType="MyDatabaseModel.Alumno" Width="1.5" PointX="5.875" PointY="1.5" />
+        <AssociationConnector Association="MyDatabaseModel.FK_Alumno_ToPadres" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
