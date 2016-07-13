@@ -45,6 +45,10 @@
     height: 800px;
     background-color: floralwhite;
 }
+#informacion{
+    margin-top: 10px;
+    color: red;
+}
 
 
 /*  Fonts  */

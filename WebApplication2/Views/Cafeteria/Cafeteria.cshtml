@@ -5,21 +5,28 @@
 }
 <div id="readerContainer">
     <div id="infoLectorQr">Enfoque el código qr con la cámara, de modo que se vea la imagen clara.</div>
-    <img id="ilustracion" src="~/Content/Plantilla/img/pulsera.jpg" />
-    <div id="reader" style="width:300px; height:250px">
-
-    </div>
     
-    <p id="prueba">
-        Datos del QR: <input id="txtCodigo" type="text" name="" />
-    </p>
+    <div id="reader" style="width:335px; height:250px">
+       
+    </div>
+    <div id="informacion">Información recibída</div>
+    <div id="datos"></div>
+    <text id="txt"></text>
+    <h6>Result</h6>
+    <span id="read" class="text-center"></span>
+    
 
 </div>
+
+
 
 <script>
     $(document).ready(function () {
         $('#reader').html5_qrcode(function (data) {
-            $('#txtCodigo').html(data);
+            //$('#txtCodigo').html(data);
+            $('#datos').html(data);
+            alert(data);
+
         },
             function (error) {
                 $('#read_error').html(error);
@@ -31,4 +38,3 @@
     });
 
 </script>
-
