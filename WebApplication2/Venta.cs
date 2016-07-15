@@ -12,13 +12,14 @@ namespace WebApplication2
     using System;
     using System.Collections.Generic;
     
-    public partial class Alumno
+    public partial class Venta
     {
-        public int Id_Hijo { get; set; }
-        public string Nombre { get; set; }
-        public string Apellido { get; set; }
-        public Nullable<int> Id_Padre { get; set; }
-    
-        public virtual Padre Padre { get; set; }
+        public int IdVenta { get; set; }
+        public int IdCliente { get; set; }
+        public string Cliente { get; set; }
+        public string Vendedor { get; set; }
+        public string DecrpVenta { get; set; }
+        public double Monto { get; set; }
+        public System.DateTime Fecha { get; set; }
     }
 }

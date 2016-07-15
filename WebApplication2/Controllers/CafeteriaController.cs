@@ -17,7 +17,12 @@ namespace WebApplication2.Controllers
         [AuthorizeUserAccessLevel (UserRole = "cafeteria")]
         public ActionResult ReporteVentas()
         {
-            return View();
+            var rv = new List<Venta>();
+            using(MyDatabaseEntities dc = new MyDatabaseEntities())
+            {
+                rv = dc.Ventas.ToList();
+            }
+            return View(rv);
         }
 
 

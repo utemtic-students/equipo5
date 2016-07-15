@@ -216,6 +216,9 @@
     <Compile Include="User.cs">
       <DependentUpon>MyModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Venta.cs">
+      <DependentUpon>MyModel.tt</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
@@ -228,7 +231,6 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Home\Padres.cshtml" />
     <Content Include="Views\Cafeteria\Cafeteria.cshtml" />
-    <Content Include="Views\Cafeteria\ReporteVentas.cshtml" />
     <Content Include="Views\Shared\_myplantilla.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\_plantillaCafetería.cshtml" />
@@ -238,6 +240,7 @@
     <Content Include="Views\Servicios\Registros.cshtml" />
     <Content Include="Views\Shared\_FormatoFormularioServicios.cshtml" />
     <Content Include="Views\Servicios\RegistroPadres.cshtml" />
+    <Content Include="Views\Cafeteria\ReporteVentas.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
