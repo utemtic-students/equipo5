@@ -41,9 +41,17 @@ namespace WebApplication2.Controllers
         }
 
         [HttpGet]
-        public ActionResult RegistroAlumnos()
+        public ActionResult RegistroAlumnos(string searchBy, string search)
         {
-            return View();
+            MyDatabaseEntities db = new MyDatabaseEntities();
+          
+          
+    
+                
+          return View(db.Padres.Where(x => x.Usuario == search || search == null).ToList());
+
+             
+           
         }
 
         [HttpPost]
@@ -56,5 +64,7 @@ namespace WebApplication2.Controllers
         {
             return View();
         }
+
+        
     }
 }
