@@ -36,6 +36,18 @@
           <Property Name="Area" Type="varchar" MaxLength="50" />
           <Property Name="EmailID" Type="varchar" MaxLength="200" />
         </EntityType>
+        <EntityType Name="Ventas">
+          <Key>
+            <PropertyRef Name="IdVenta" />
+          </Key>
+          <Property Name="IdVenta" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdCliente" Type="int" Nullable="false" />
+          <Property Name="Cliente" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="Vendedor" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="DecrpVenta" Type="varchar" MaxLength="150" Nullable="false" />
+          <Property Name="Monto" Type="float" Nullable="false" />
+          <Property Name="Fecha" Type="date" Nullable="false" />
+        </EntityType>
         <Association Name="FK_Alumno_ToPadres">
           <End Role="Padres" Type="Self.Padres" Multiplicity="0..1" />
           <End Role="Alumnos" Type="Self.Alumnos" Multiplicity="*" />
@@ -58,6 +70,7 @@
           <EntitySet Name="Alumnos" EntityType="Self.Alumnos" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Padres" EntityType="Self.Padres" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Ventas" EntityType="Self.Ventas" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_Alumno_ToPadres" Association="Self.FK_Alumno_ToPadres">
             <End Role="Padres" EntitySet="Padres" />
             <End Role="Alumnos" EntitySet="Alumnos" />
@@ -93,6 +106,7 @@
             <End Role="Padre" EntitySet="Padres" />
             <End Role="Alumno" EntitySet="Alumnos" />
           </AssociationSet>
+          <EntitySet Name="Ventas" EntityType="MyDatabaseModel.Venta" />
         </EntityContainer>
         <EntityType Name="Padre">
           <Key>
@@ -127,6 +141,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="Venta">
+          <Key>
+            <PropertyRef Name="IdVenta" />
+          </Key>
+          <Property Name="IdVenta" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdCliente" Type="Int32" Nullable="false" />
+          <Property Name="Cliente" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Vendedor" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="DecrpVenta" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="Monto" Type="Double" Nullable="false" />
+          <Property Name="Fecha" Type="DateTime" Nullable="false" Precision="0" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -165,6 +191,19 @@
                 <ScalarProperty Name="Apellido" ColumnName="Apellido" />
                 <ScalarProperty Name="Nombre" ColumnName="Nombre" />
                 <ScalarProperty Name="Id_Hijo" ColumnName="Id_Hijo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Ventas">
+            <EntityTypeMapping TypeName="MyDatabaseModel.Venta">
+              <MappingFragment StoreEntitySet="Ventas">
+                <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+                <ScalarProperty Name="Monto" ColumnName="Monto" />
+                <ScalarProperty Name="DecrpVenta" ColumnName="DecrpVenta" />
+                <ScalarProperty Name="Vendedor" ColumnName="Vendedor" />
+                <ScalarProperty Name="Cliente" ColumnName="Cliente" />
+                <ScalarProperty Name="IdCliente" ColumnName="IdCliente" />
+                <ScalarProperty Name="IdVenta" ColumnName="IdVenta" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

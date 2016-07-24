@@ -9,6 +9,7 @@
         <EntityTypeShape EntityType="MyDatabaseModel.Padre" Width="1.5" PointX="3.625" PointY="1.375" />
         <EntityTypeShape EntityType="MyDatabaseModel.Alumno" Width="1.5" PointX="5.875" PointY="1.5" />
         <AssociationConnector Association="MyDatabaseModel.FK_Alumno_ToPadres" />
+        <EntityTypeShape EntityType="MyDatabaseModel.Venta" Width="1.5" PointX="0.75" PointY="4.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
