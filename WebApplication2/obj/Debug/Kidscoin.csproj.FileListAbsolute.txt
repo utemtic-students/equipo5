@@ -306,3 +306,4 @@ D:\Users\SLIFER\Documents\GitHub\kidscoin\WebApplication2\bin\es\System.Web.Help
 D:\Users\SLIFER\Documents\GitHub\kidscoin\WebApplication2\bin\es\System.Web.Mvc.resources.dll
 D:\Users\SLIFER\Documents\GitHub\kidscoin\WebApplication2\obj\Debug\WebApplication2.dll
 D:\Users\SLIFER\Documents\GitHub\kidscoin\WebApplication2\obj\Debug\WebApplication2.pdb
+D:\Users\SLIFER\Documents\GitHub\kidscoin\WebApplication2\obj\Debug\Kidscoin.csprojResolveAssemblyReference.cache
