@@ -306,3 +306,12 @@ D:\Users\SLIFER\Documents\GitHub\kidscoin\WebApplication2\bin\es\System.Web.Help
 D:\Users\SLIFER\Documents\GitHub\kidscoin\WebApplication2\bin\es\System.Web.Mvc.resources.dll
 D:\Users\SLIFER\Documents\GitHub\kidscoin\WebApplication2\obj\Debug\WebApplication2.dll
 D:\Users\SLIFER\Documents\GitHub\kidscoin\WebApplication2\obj\Debug\WebApplication2.pdb
+C:\Users\USUARIO\Documents\GitHub\kidscoin\WebApplication2\bin\EntityFramework.SqlServer.dll
+C:\Users\USUARIO\Documents\GitHub\kidscoin\WebApplication2\bin\EntityFramework.SqlServer.xml
+C:\Users\USUARIO\Documents\GitHub\kidscoin\WebApplication2\bin\es\System.Web.Razor.resources.dll
+C:\Users\USUARIO\Documents\GitHub\kidscoin\WebApplication2\bin\es\System.Web.Webpages.resources.dll
+C:\Users\USUARIO\Documents\GitHub\kidscoin\WebApplication2\bin\es\System.Web.Webpages.Deployment.resources.dll
+C:\Users\USUARIO\Documents\GitHub\kidscoin\WebApplication2\bin\es\System.Web.Webpages.Razor.resources.dll
+C:\Users\USUARIO\Documents\GitHub\kidscoin\WebApplication2\bin\es\System.Web.Helpers.resources.dll
+C:\Users\USUARIO\Documents\GitHub\kidscoin\WebApplication2\bin\es\System.Web.Mvc.resources.dll
+C:\Users\USUARIO\Documents\GitHub\kidscoin\WebApplication2\obj\Debug\Kidscoin.csprojResolveAssemblyReference.cache
