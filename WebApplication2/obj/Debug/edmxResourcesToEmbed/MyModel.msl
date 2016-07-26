@@ -17,6 +17,7 @@
     <EntitySetMapping Name="Padres">
       <EntityTypeMapping TypeName="MyDatabaseModel.Padre">
         <MappingFragment StoreEntitySet="Padres">
+          <ScalarProperty Name="Saldo" ColumnName="Saldo" />
           <ScalarProperty Name="Contrasenia" ColumnName="Contrasenia" />
           <ScalarProperty Name="Usuario" ColumnName="Usuario" />
           <ScalarProperty Name="Apellido" ColumnName="Apellido" />

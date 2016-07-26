@@ -24,6 +24,7 @@ namespace WebApplication2
         public string Apellido { get; set; }
         public string Usuario { get; set; }
         public string Contrasenia { get; set; }
+        public Nullable<double> Saldo { get; set; }
     
         public virtual ICollection<Alumno> Alumnos { get; set; }
     }

@@ -38,6 +38,7 @@
     <Property Name="Usuario" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="Contrasenia" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="Alumnos" Relationship="MyDatabaseModel.FK_Alumno_ToPadres" FromRole="Padre" ToRole="Alumno" />
+    <Property Name="Saldo" Type="Double" />
   </EntityType>
   <EntityType Name="Alumno">
     <Key>

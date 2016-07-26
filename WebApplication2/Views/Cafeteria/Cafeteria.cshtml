@@ -14,8 +14,9 @@
     <text id="txt"></text>
     <h6>Result</h6>
     <span id="read" class="text-center"></span>
-    
 
+
+     @Html.Action( "BuscarCliente", new { id = "<div id='datos'></div>" });
 </div>
 
 
@@ -26,7 +27,7 @@
             //$('#txtCodigo').html(data);
             $('#datos').html(data);
             alert(data);
-
+            
         },
             function (error) {
                 $('#read_error').html(error);

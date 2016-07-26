@@ -243,6 +243,7 @@
     <Content Include="Views\Shared\_FormatoFormularioServicios.cshtml" />
     <Content Include="Views\Servicios\RegistroPadres.cshtml" />
     <Content Include="Views\Cafeteria\ReporteVentas.cshtml" />
+    <Content Include="Views\Cafeteria\BuscarCliente.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
