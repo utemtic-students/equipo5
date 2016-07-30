@@ -35,14 +35,15 @@
             <ul>
                 @{
                     <li>Hola, @(Request.IsAuthenticated ? HttpContext.Current.User.Identity.Name : "Invitado")</li>
-                        //<li>@Html.ActionLink("Inicio", "Index", "Home")</li>
+                    //<li>@Html.ActionLink("Inicio", "Index", "Home")</li>
                     if (Request.IsAuthenticated)
                     {
-                        
+                        if (ViewData["rol"].Equals("cafeteria"))
+                        {
                             <li>@Html.ActionLink("Reporte de ventas", "ReporteVentas", "Cafeteria")</li>
                             <li>@Html.ActionLink("Cafetería", "Cafeteria", "Cafeteria")</li>
+                        }
                         
-
                         using (Html.BeginForm("Logout", "MyAccount", FormMethod.Post, new { id = "logoutform" }))
                         {
                             <li><a href="javascript:document.getElementById('logoutform').submit()">Cerrar sesión</a></li>
