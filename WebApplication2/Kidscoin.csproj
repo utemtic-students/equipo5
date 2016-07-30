@@ -153,6 +153,33 @@
     <Content Include="Content\assets\js\jquery.backstretch.min.js" />
     <Content Include="Content\assets\js\placeholder.js" />
     <Content Include="Content\assets\js\scripts.js" />
+    <Content Include="Content\NewIndex\css\font-awesome.min.css" />
+    <Content Include="Content\NewIndex\css\ie\backgroundsize.min.htc" />
+    <Content Include="Content\NewIndex\css\ie\html5shiv.js" />
+    <Content Include="Content\NewIndex\css\ie\v8.css" />
+    <Content Include="Content\NewIndex\css\images\overlay.png" />
+    <Content Include="Content\NewIndex\css\skel.css" />
+    <Content Include="Content\NewIndex\css\style-large.css" />
+    <Content Include="Content\NewIndex\css\style-medium.css" />
+    <Content Include="Content\NewIndex\css\style-small.css" />
+    <Content Include="Content\NewIndex\css\style-xlarge.css" />
+    <Content Include="Content\NewIndex\css\style-xsmall.css" />
+    <Content Include="Content\NewIndex\css\style.css" />
+    <Content Include="Content\NewIndex\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\NewIndex\images\banner.jpg" />
+    <Content Include="Content\NewIndex\images\pic01.jpg" />
+    <Content Include="Content\NewIndex\images\pic02.jpg" />
+    <Content Include="Content\NewIndex\images\pic03.jpg" />
+    <Content Include="Content\NewIndex\images\pic04.jpg" />
+    <Content Include="Content\NewIndex\images\pic05.jpg" />
+    <Content Include="Content\NewIndex\images\pic06.jpg" />
+    <Content Include="Content\NewIndex\images\pic07.jpg" />
+    <Content Include="Content\NewIndex\images\pic08.jpg" />
+    <Content Include="Content\NewIndex\images\pic09.jpg" />
+    <Content Include="Content\NewIndex\js\init.js" />
+    <Content Include="Content\NewIndex\js\jquery.min.js" />
+    <Content Include="Content\NewIndex\js\skel-layers.min.js" />
+    <Content Include="Content\NewIndex\js\skel.min.js" />
     <Content Include="Content\Plantilla\css\animate.css" />
     <Content Include="Content\Plantilla\css\fancybox-buttons.css" />
     <Content Include="Content\Plantilla\css\fancybox-thumbs.css" />
@@ -218,6 +245,10 @@
     </Content>
     <Content Include="Metadata\deploymentTemplates\apiappconfig.azureresource.json" />
     <Content Include="apiapp.json" />
+    <Content Include="Content\NewIndex\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\NewIndex\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\NewIndex\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\NewIndex\fonts\FontAwesome.otf" />
     <None Include="Properties\PublishProfiles\MyAsp.Net.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -284,7 +315,6 @@
     <Content Include="Views\Home\Padres.cshtml" />
     <Content Include="Views\Cafeteria\Cafeteria.cshtml" />
     <Content Include="Views\Shared\_myplantilla.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\_plantillaCafetería.cshtml" />
     <Content Include="Views\Shared\_PlantillaServicios.cshtml" />
     <Content Include="Views\Servicios\Servicios.cshtml" />
@@ -296,6 +326,8 @@
     <Content Include="Views\Cafeteria\BuscarCliente.cshtml" />
     <Content Include="Views\Shared\_plantillaLogin.cshtml" />
     <Content Include="Views\MyAccount\Login.cshtml" />
+    <Content Include="Views\Shared\_PlantillaIndexResponsiva.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

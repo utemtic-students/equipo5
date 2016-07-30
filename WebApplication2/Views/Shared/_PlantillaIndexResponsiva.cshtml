@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>KidsCoin</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+   
+
+    <script src="@Url.Content("~/Content/NewIndex/")js/jquery.min.js"></script>
+    <script src="@Url.Content("~/Content/NewIndex/")js/skel.min.js"></script>
+    <script src="@Url.Content("~/Content/NewIndex/")js/skel-layers.min.js"></script>
+    <script src="@Url.Content("~/Content/NewIndex/")js/init.js"></script>
+
+
+
+    
+    <link rel="stylesheet" href="@Url.Content("~/Content/NewIndex/")css/style.css" />
+    <link rel="stylesheet" href="@Url.Content("~/Content/NewIndex/")css/style-xlarge.css" />
+    <link rel="stylesheet" href="@Url.Content("~/Content/NewIndex/")css/style-medium.css" />
+    <link rel="stylesheet" href="@Url.Content("~/Content/NewIndex/")css/style-small.css" />
+    <link rel="stylesheet" href="@Url.Content("~/Content/NewIndex/")css/style-xsmall.css" />
+    <!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+</head>
+<body class="landing">
+
+    <!-- Header -->
+    <header id="header">
+        <h1>@Html.ActionLink("KidsCoin", "Index", "Home")</h1>
+        <nav id="nav">
+            <ul>
+                @{
+                    <li>Hola, @(Request.IsAuthenticated ? HttpContext.Current.User.Identity.Name : "Invitado")</li>
+                        //<li>@Html.ActionLink("Inicio", "Index", "Home")</li>
+                    if (Request.IsAuthenticated)
+                    {
+                        
+                            <li>@Html.ActionLink("Reporte de ventas", "ReporteVentas", "Cafeteria")</li>
+                            <li>@Html.ActionLink("Cafetería", "Cafeteria", "Cafeteria")</li>
+                        
+
+                        using (Html.BeginForm("Logout", "MyAccount", FormMethod.Post, new { id = "logoutform" }))
+                        {
+                            <li><a href="javascript:document.getElementById('logoutform').submit()">Cerrar sesión</a></li>
+                        }
+                    }
+                    else
+                    {
+                        <li>@Html.ActionLink("Iniciar sesión", "Login", "MyAccount")</li>
+                    }
+                }
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Banner -->
+    <section id="banner">
+        <h2>Bienvenido al sistema virtual KidsCoin</h2>
+        <p>Inicie sesión para utilizar el sistema.</p>
+        <ul class="actions">
+            <li>
+               
+            </li>
+        </ul>
+    </section>
+
+        <div>
+            @RenderBody()
+        </div>
+    </body>
+</html>
