@@ -1,52 +1,82 @@
 ﻿@model WebApplication2.Models.Login
 
 @{
-    ViewBag.Title = "Inicio de sesión";
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_plantillaLogin.cshtml";
 }
 
-<h2>Iniciar sesión</h2>
-
-@using (Html.BeginForm()) 
+@using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
-    <div class="form-horizontal">
-        <h4>Por favor ingrese sus datos de acceso.</h4>
-        <hr />
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        <div class="form-group">
-            @Html.LabelFor(model => model.Username, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Username, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Username, "", new { @class = "text-danger" })
-            </div>
-        </div>
+        <!-- Top content -->
+    <div class="top-content">
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.RememberMe, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                <div class="checkbox">
-                    @Html.EditorFor(model => model.RememberMe)
-                    @Html.ValidationMessageFor(model => model.RememberMe, "", new { @class = "text-danger" })
+        <div class="inner-bg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-8 col-sm-offset-2 text">
+                        <h1><strong>KidsCoin</strong></h1>
+                        <div class="description">
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6 col-sm-offset-3 form-box">
+                        <div class="form-top">
+                            <div class="form-top-left">
+                                <h3>Inicia sesión</h3>
+                                <p>Debes ingresar tu usuario y contraseña: 
+                                 @Html.ActionLink("Inicio", "Index", "Home")</p>
+                            </div>
+                            <div class="form-top-right">
+                                <i class="fa fa-lock"></i>
+                            </div>
+                        </div>
+                        <div class="form-bottom">
+                            <form role="form" action="" method="post" class="login-form">
+                                <div class="form-group">
+                                    <label class="sr-only" for="Username">Usuario</label>
+                                    <input type="text" name="Username" placeholder="Usuario..." class="form-username form-control" id="form-username">
+                                </div>
+                                <div class="form-group">
+                                    <label class="sr-only" for="Password">Password</label>
+                                    <input type="password" name="Password" placeholder="Contraseña..." class="form-password form-control" id="form-password">
+                                </div>
+                                <button type="submit" class="btn">Iniciar</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6 col-sm-offset-3 social-login">
+                        <h3>...Ó inicia con: (Proximamente)</h3>
+                        <div class="social-login-buttons">
+                            <a class="btn btn-link-2" href="#">
+                                <i class="fa fa-facebook"></i> Facebook
+                            </a>
+                            <a class="btn btn-link-2" href="#">
+                                <i class="fa fa-twitter"></i> Twitter
+                            </a>
+                            <a class="btn btn-link-2" href="#">
+                                <i class="fa fa-google-plus"></i> Google Plus
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Iniciar" class="btn btn-default" />
-            </div>
-        </div>
     </div>
-}
 
-<div>
-</div>
+
+        <!-- Javascript -->
+        <script src="@Url.Content("~/Content/assets/")js/jquery-1.11.1.min.js"></script>
+        <script src="@Url.Content("~/Content/assets/")bootstrap/js/bootstrap.min.js"></script>
+        <script src="@Url.Content("~/Content/assets/")js/jquery.backstretch.min.js"></script>
+        <script src="@Url.Content("~/Content/assets/")js/scripts.js"></script>
+
+        <!--[if lt IE 10]>
+            <script src="assets/js/placeholder.js"></script>
+        <![endif]-->
+}
