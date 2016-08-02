@@ -244,6 +244,7 @@
     <Content Include="Views\Servicios\RegistroPadres.cshtml" />
     <Content Include="Views\Cafeteria\ReporteVentas.cshtml" />
     <Content Include="Views\Servicios\RegistroAlumnos.cshtml" />
+    <Content Include="Views\Servicios\Reporte.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
