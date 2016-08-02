@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "Reporte de Padres";
+    var grid = new WebGrid(source: Model, canPage: true, rowsPerPage: 15);
+    grid.Pager(WebGridPagerModes.All);
+}
+
+<h2>Reporte de Alumnos</h2>
+
+
+
+    @grid.GetHtml(
+    tableStyle: "webgrid-table",
+    headerStyle: "webgrid-header",
+    alternatingRowStyle: "webgrid-alternating-row",
+    rowStyle: "webgrid-row-style",
+    columns: grid.Columns(
+        //here i will add column for serial no
+        // grid.Column(header: "Serial No", format:@<text><div>@(item.WebGrid.Rows.IndexOf(item) + 1)</div></text>),
+        grid.Column(columnName: "Id_Hijo", header: "ID"),
+        grid.Column(columnName: "Id_Padre", header: "NOMBRE"),
+        grid.Column(columnName: "Nombre", header: "NOMBRE"),
+        grid.Column(columnName: "Apellido", header: "APELLIDO")))
+
+
+
+

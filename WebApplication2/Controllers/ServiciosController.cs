@@ -65,9 +65,15 @@ namespace WebApplication2.Controllers
             return View(dc.Padres.ToList());
            
         }
-       
-        
-        
+        public ActionResult Reportealumnos()
+        {
+            MyDatabaseEntities dc = new MyDatabaseEntities();
+            return View(dc.Alumnos.ToList());
+
+        }
+
+
+
 
     }
 }
