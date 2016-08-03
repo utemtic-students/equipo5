@@ -1,11 +1,39 @@
-﻿
-<h2>Datos de cliente</h2>
+﻿<table id="miyazaki">
+    <caption>Datos del alumno</caption>
+    <thead>
+        <tr><th>Nombre<th>Apellido<th>Saldo
+    <tbody>
+        <tr>
+            <td>@ViewData["Nombre"] </td>
+            <td>@ViewData["Apellido"]</td>
+            <td>@ViewData["Saldo"]</td>
+</table>
+<form action="Ventas" method="post" onsubmit="return valida()">
+    @{using (Html.BeginForm("Ventas", "Cafeteria"))
+        {
 
-<div>
-    <h4>Alumno</h4>
-    ID: <div>@ViewData["Id"]</div>
-    Nombre: <div>@ViewData["Nombre"]</div>
-    Apellido: <div>@ViewData["Apellido"]</div>
-    Saldo: <div>@ViewData["Saldo"]</div>
+            <input type="hidden" name="idCliente" value="@ViewData["Id"]" />
+                <input type="hidden" name="Vendedor" value="@HttpContext.Current.User.Identity.Name" />
+                <input type="hidden" name="Fecha" value="@DateTime.Now" />
+                <input type="hidden" name="Cliente" value="@ViewData["Nombre"]" />
+                <input id="desc" type="text" placeholder="Descripción" name="DecrpVenta" value="" />
+                <input id="Monto" placeholder="Monto" type="number" name="Monto" min="1" max="@ViewData["Saldo"]" value="" />
+                <input type="submit" onsubmit="return valida()" value="Realizar" />
 
-</div>
+                <script type="text/javascript">
+                    function valida() {
+                        campo = document.getElementById("Monto");
+                        campo2 = document.getElementById("desc");
+                        if (campo.value == '' || campo2.value == '') {
+                            alert('¡Hay campos vacíos!, verifíca la información.');
+                            return false;
+                        }
+                        return true;
+                    }
+                </script>
+        }
+    }
+</form>
+
+
+
