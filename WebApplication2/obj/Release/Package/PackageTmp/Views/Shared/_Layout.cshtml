@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" type="image/ico" href="@Url.Content("~/Content/Plantilla/")img/logo.ico">
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/js/html5-qrcode.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <style>
+        .menu{
+            list-style:none;
+            float:right;
+        }
+        .menu li{
+            float:left;
+        }
+        .menu li a {
+            padding: 5px;
+            margin-right: 2px;
+            background-color: #f3f3f3;
+        }
+    </style>
+</head>
+<body>
+    <ul class="menu">
+      
+    @{
+        
+        //<li>@Html.ActionLink("Cafeteria", "Cafeteria", "Home")</li>
+        <li>@Html.ActionLink("Inicio", "Index", "Home")</li>
+        if (Request.IsAuthenticated)
+        {
+            if (Request.FilePath.Contains("Cafeteria"))
+            {
+                @Html.ActionLink("Reporte de ventas", "ReporteVentas", "Cafeteria")
+            }
+
+            using (Html.BeginForm("Logout", "MyAccount", FormMethod.Post, new { id = "logoutform" }))
+            {
+                    <li><a href="javascript:document.getElementById('logoutform').submit()">Cerrar sesión</a></li>
+                }
+            }else
+            {
+                @Html.ActionLink("Iniciar sesión", "Login", "MyAccount")
+            }
+        }
+    </ul>
+               <div style="height:1px;clear:both;"></div>
+            
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - KidsCoin Application</p>
+        </footer>
+    </div>
+
+   
+
+</body>
+</html>

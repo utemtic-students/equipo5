@@ -14,8 +14,9 @@
     <text id="txt"></text>
     <h6>Result</h6>
     <span id="read" class="text-center"></span>
-    
 
+
+    
 </div>
 
 
@@ -24,9 +25,20 @@
     $(document).ready(function () {
         $('#reader').html5_qrcode(function (data) {
             //$('#txtCodigo').html(data);
-            $('#datos').html(data);
+            //$('#datos').html(data);
             alert(data);
-
+            $.ajax({
+                url: "/Cafeteria/BuscarCliente",
+                data: { 'id': data },
+                type: 'GET',
+                success: function (result) {
+                    $('#datos').html(result);
+                },
+                error: function (result) {
+                    alert("No existe ese ID");
+                }
+            });
+            
         },
             function (error) {
                 $('#read_error').html(error);

@@ -1,30 +1,90 @@
 ﻿
 @{
-    ViewBag.Title = "KidsCoin";
-    Layout = "~/Views/Shared/_myplantilla.cshtml";
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_PlantillaIndexResponsiva.cshtml";
 }
 
-<section class="services wrapper">
-    <ul class="clearfix">
-        <li class="animated wow fadeInDown">
-            <img class="icon" src="@Url.Content("~/Content/Plantilla/")img/KidsCoin.jpg" alt="" />
-            <span class="separator"></span>
+<!-- One -->
+<section id="one" class="wrapper style1 align-center">
+    <div class="container">
+        <header>
             <h2>KidsCoin</h2>
-            <p>
-                Es un sistema con el cual los niños podrán tener acceso a dinero electrónico mediante una pulsera con un código qr, la cual contendrá la información suficiente para realizar la transacción.
-            </p>
-        </li>
-        <li class="animated wow fadeInDown" data-wow-delay=".2s">
-            <img class="icon" src="@Url.Content("~/Content/Plantilla/")img/seguridad.png" alt="" />
-            <span class="separator"></span>
-            <h2>Seguridad</h2>
-            <p>El sistema esta pensado para utilizarse en instituciones académicas, de esta manera el dinero abonado al sistema, no podrá ser utilizado fuera de la institución.</p>
-        </li>
-        <li class="animated wow fadeInDown" data-wow-delay=".4s">
-            <img class="icon" src="@Url.Content("~/Content/Plantilla/")img/paypal.png" alt="" />
-            <span class="separator"></span>
-            <h2>Sistema de cobro por Paypal</h2>
-            <p>Todas las transacciones realizadas dentro del sistema utilizan paypal para realizar los cobros, con el propósito de no utilizar más el dinero en efectivo </p>
-        </li>
-    </ul>
-</section><!--  End services  -->
+            <p>Caracteristicas del sistema.</p>
+        </header>
+        <div class="row 200%">
+            <section class="4u 12u$(small)">
+                <img src="@Url.Content("~/Content/NewIndex/")images/engrane.png" width="100px" height="100px"/>
+                <p> Es un sistema con el cual los niños podrán tener acceso a dinero electrónico mediante una pulsera con un código qr, la cual contendrá la información suficiente para realizar la transacción.</p>
+            </section>
+            <section class="4u 12u$(small)">
+                <img src="@Url.Content("~/Content/NewIndex/")images/candado.png" width="100px" height="100px" />
+                <p>El sistema esta pensado para utilizarse en instituciones académicas, de esta manera el dinero abonado al sistema, no podrá ser utilizado fuera de la institución.</p>
+            </section>
+            <section class="4u$ 12u$(small)">
+                <img src="@Url.Content("~/Content/NewIndex/")images/moneda.png" width="100px" height="100px" />
+                <p>Todas las transacciones realizadas dentro del sistema utilizan paypal para realizar los cobros, con el propósito de no utilizar más el dinero en efectivo </p>
+            </section>
+        </div>
+    </div>
+</section>
+
+<footer id="footer">
+    <div class="container">
+        <div class="row">
+            <section class="4u 6u(medium) 12u$(small)">
+                <h3>Equipo de desarrollo</h3>
+                <p>KidsCoin</p>
+                <ul class="alt">
+                    <li><a href="#">Eduardo Hernández</a></li>
+                    <li><a href="#">Jhoana López</a></li>
+                    <li><a href="#">Diana Valeria</a></li>
+                    <li><a href="#">Diana Várgas</a></li>
+                </ul>
+            </section>
+            <section class="4u 6u$(medium) 12u$(small)">
+                <h3>Áreas asignadas</h3>
+                <p>-</p>
+                <ul class="alt">
+                    <li><a href="#">Diseño, BD, servidor en la nube, seguridad, área de cafetería.</a></li>
+                    <li><a href="#">BD, Registros, área de servicios.</a></li>
+                    <li><a href="#">Cobro PayPal, área de padres, DB.</a></li>
+                    <li><a href="#">Diseño área de servicios.</a></li>
+                </ul>
+            </section>
+            <section class="4u$ 12u$(medium) 12u$(small)">
+                <h3>Contáctanos</h3>
+                <ul class="icons">
+                    <li><a href="#" class="icon rounded fa-twitter"><span class="label">Twitter</span></a></li>
+                    <li><a href="#" class="icon rounded fa-facebook"><span class="label">Facebook</span></a></li>
+                    <li><a href="#" class="icon rounded fa-pinterest"><span class="label">Pinterest</span></a></li>
+                    <li><a href="#" class="icon rounded fa-google-plus"><span class="label">Google+</span></a></li>
+                    <li><a href="#" class="icon rounded fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                </ul>
+                <ul class="tabular">
+                    <li>
+                        <h3>Dirección</h3>
+                        Manzanillo, Colima, Calle<br>
+                        Camino hacia las humedades, Salagua S/N.
+                    </li>
+                    <li>
+                        <h3>Correo</h3>
+                        <a href="#">eduardo.truns@gmail.com</a>
+                    </li>
+                    <li>
+                        <h3>Teléfono</h3>
+                        (314) 000-0000
+                    </li>
+                </ul>
+            </section>
+        </div>
+        <ul class="copyright">
+            <li>&copy; KidsCoin. All rights reserved.</li>
+        </ul>
+    </div>
+</footer>
+
+
+
+
+
+

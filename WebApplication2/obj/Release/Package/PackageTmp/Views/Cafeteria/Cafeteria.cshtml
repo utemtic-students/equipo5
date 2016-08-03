@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewBag.Title = "Cafeteria";
+    Layout = "~/Views/Shared/_plantillaCafetería.cshtml";
+}
+<div id="readerContainer">
+    <div id="infoLectorQr">Enfoque el código qr con la cámara, de modo que se vea la imagen clara.</div>
+    
+    <div id="reader" style="width:335px; height:250px">
+       
+    </div>
+    <div id="informacion">Información recibída</div>
+    <div id="datos"></div>
+    <text id="txt"></text>
+    <h6>Result</h6>
+    <span id="read" class="text-center"></span>
+
+
+    
+</div>
+
+
+
+<script>
+    $(document).ready(function () {
+        $('#reader').html5_qrcode(function (data) {
+            //$('#txtCodigo').html(data);
+            $('#datos').html(data);
+            alert(data);
+            
+        },
+            function (error) {
+                $('#read_error').html(error);
+            }, function (videoError) {
+                //$('#vid_error').html(videoError);
+                alert("No hay cámara");
+            }
+        );
+    });
+
+</script>
