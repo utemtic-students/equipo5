@@ -401,3 +401,4 @@ C:\Users\DianaLaura\Documents\Visual Studio 2015\Projects\kidscoin\WebApplicatio
 C:\Users\DianaLaura\Documents\Visual Studio 2015\Projects\kidscoin\WebApplication2\obj\Debug\Kidscoin.csprojResolveAssemblyReference.cache
 C:\Users\DianaLaura\Documents\Visual Studio 2015\Projects\kidscoin\WebApplication2\obj\Debug\WebApplication2.dll
 C:\Users\DianaLaura\Documents\Visual Studio 2015\Projects\kidscoin\WebApplication2\obj\Debug\WebApplication2.pdb
+D:\Users\SLIFER\Documents\GitHub\kidscoin\WebApplication2\obj\Debug\Kidscoin.csprojResolveAssemblyReference.cache
