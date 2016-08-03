@@ -12,7 +12,7 @@ namespace WebApplication2.Controllers
         MyDatabaseEntities db = new MyDatabaseEntities();
 
       
-        public ActionResult BuscarCliente(string id)
+        public ActionResult BuscarCliente(int id)
         {
                 MyDatabaseEntities dc = new MyDatabaseEntities();
             
@@ -21,13 +21,8 @@ namespace WebApplication2.Controllers
                 ViewData["Nombre"] = res.Nombre;
                 ViewData["Apellido"] = res.Apellido;
                 int idPadre = res.Id_Padre.Value;
-
                 var saldo = dc.Padres.Where(a => a.Id.Equals(idPadre)).FirstOrDefault();
                 ViewData["Saldo"] = saldo.Saldo;
-
-
-
-
                 return View (id);
         }
 
