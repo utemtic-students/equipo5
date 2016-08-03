@@ -51,32 +51,11 @@
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.Azure.AppService.ApiApps.Service, Version=0.9.16.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Azure.AppService.ApiApps.Service.0.9.16\lib\net45\Microsoft.Azure.AppService.ApiApps.Service.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Swashbuckle.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cd1bb07a5ac7c7bc, processorArchitecture=MSIL">
-      <HintPath>..\packages\Swashbuckle.Core.5.0.0\lib\net40\Swashbuckle.Core.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="System.IdentityModel.Tokens.Jwt, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.IdentityModel.Tokens.Jwt.4.0.0\lib\net45\System.IdentityModel.Tokens.Jwt.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="System.Net.Http" />
-    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
@@ -88,14 +67,6 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
-    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
@@ -103,10 +74,6 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
-    <Reference Include="WebActivatorEx, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
-      <HintPath>..\packages\WebActivatorEx.2.0.6\lib\net40\WebActivatorEx.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System.Web.Razor">
@@ -144,14 +111,16 @@
     <Content Include="Content\assets\bootstrap\js\bootstrap.js" />
     <Content Include="Content\assets\bootstrap\js\bootstrap.min.js" />
     <Content Include="Content\assets\bootstrap\js\npm.js" />
+    <Content Include="Content\assets\css\form-elements.css" />
+    <Content Include="Content\assets\css\style.css" />
     <Content Include="Content\assets\font-awesome\css\font-awesome.css" />
     <Content Include="Content\assets\font-awesome\css\font-awesome.min.css" />
     <Content Include="Content\assets\font-awesome\fonts\fontawesome-webfont.svg" />
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\Cafeteria.css" />
-    <Content Include="Content\assets\css\form-elements.css" />
-    <Content Include="Content\assets\css\style.css" />
+    <Content Include="Content\assets\ico\apple-touch-icon-114-precomposed.png" />
+    <Content Include="Content\assets\ico\apple-touch-icon-144-precomposed.png" />
+    <Content Include="Content\assets\ico\apple-touch-icon-57-precomposed.png" />
+    <Content Include="Content\assets\ico\apple-touch-icon-72-precomposed.png" />
+    <Content Include="Content\assets\ico\favicon.png" />
     <Content Include="Content\assets\img\backgrounds\1%402x.jpg" />
     <Content Include="Content\assets\img\backgrounds\1.jpg" />
     <Content Include="Content\assets\img\backgrounds\2%402x.jpg" />
@@ -164,6 +133,9 @@
     <Content Include="Content\assets\js\jquery.backstretch.min.js" />
     <Content Include="Content\assets\js\placeholder.js" />
     <Content Include="Content\assets\js\scripts.js" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Cafeteria.css" />
     <Content Include="Content\NewIndex\css\font-awesome.min.css" />
     <Content Include="Content\NewIndex\css\ie\backgroundsize.min.htc" />
     <Content Include="Content\NewIndex\css\ie\html5shiv.js" />
@@ -213,6 +185,7 @@
     <Content Include="Content\Plantilla\img\pulsera.jpg" />
     <Content Include="Content\Plantilla\img\seguridad.png" />
     <Content Include="Content\Plantilla\img\tcback1.jpg" />
+    <Content Include="Content\scriptTablaCafeteria.js" />
     <Content Include="Content\SERVCSS\css\animate.css" />
     <Content Include="Content\SERVCSS\css\cafeteria.css" />
     <Content Include="Content\SERVCSS\css\fancybox-buttons.css" />
@@ -233,6 +206,7 @@
     <Content Include="Content\SERVCSS\img\seguridad.png" />
     <Content Include="Content\SERVCSS\img\tcback1.jpg" />
     <Content Include="Content\Site.css" />
+    <Content Include="Content\tablaCafeteria.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="js\html5-qrcode.min.js" />
@@ -257,12 +231,6 @@
     <Content Include="MyModel.edmx.diagram">
       <DependentUpon>MyModel.edmx</DependentUpon>
     </Content>
-    <Content Include="Metadata\deploymentTemplates\apiappconfig.azureresource.json" />
-    <Content Include="apiapp.json" />
-    <Content Include="Content\NewIndex\fonts\fontawesome-webfont.eot" />
-    <Content Include="Content\NewIndex\fonts\fontawesome-webfont.ttf" />
-    <Content Include="Content\NewIndex\fonts\fontawesome-webfont.woff" />
-    <Content Include="Content\NewIndex\fonts\FontAwesome.otf" />
     <Content Include="Content\assets\bootstrap\css\bootstrap-theme.css.map" />
     <Content Include="Content\assets\bootstrap\css\bootstrap.css.map" />
     <Content Include="Content\assets\bootstrap\fonts\glyphicons-halflings-regular.eot" />
@@ -300,7 +268,10 @@
     <Content Include="Content\assets\font-awesome\scss\_rotated-flipped.scss" />
     <Content Include="Content\assets\font-awesome\scss\_stacked.scss" />
     <Content Include="Content\assets\font-awesome\scss\_variables.scss" />
-    <None Include="Properties\PublishProfiles\MyAsp.Net.pubxml" />
+    <Content Include="Content\NewIndex\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\NewIndex\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\NewIndex\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\NewIndex\fonts\FontAwesome.otf" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -309,14 +280,15 @@
     <Content Include="Views\FondosCafeteria\coffee-art-iphone-wallpaper-2560x1440.jpg" />
     <Content Include="Views\FondosCafeteria\tcback1.jpg" />
     <Content Include="Web.config" />
+    <Content Include="Views\MyAccount\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Alumno.cs">
       <DependentUpon>MyModel.tt</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="App_Start\SwaggerConfig.cs" />
     <Compile Include="Controllers\AgregarPadres.cs" />
+    <Compile Include="Controllers\agregarVenta.cs" />
     <Compile Include="Controllers\AuthorizeUserAccessLevel.cs" />
     <Compile Include="Controllers\CafeteriaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -366,6 +338,7 @@
     <Content Include="Views\Home\Padres.cshtml" />
     <Content Include="Views\Cafeteria\Cafeteria.cshtml" />
     <Content Include="Views\Shared\_myplantilla.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\_plantillaCafetería.cshtml" />
     <Content Include="Views\Shared\_PlantillaServicios.cshtml" />
     <Content Include="Views\Servicios\Servicios.cshtml" />
@@ -374,11 +347,11 @@
     <Content Include="Views\Shared\_FormatoFormularioServicios.cshtml" />
     <Content Include="Views\Servicios\RegistroPadres.cshtml" />
     <Content Include="Views\Cafeteria\ReporteVentas.cshtml" />
-    <Content Include="Views\Cafeteria\BuscarCliente.cshtml" />
-    <Content Include="Views\Shared\_plantillaLogin.cshtml" />
-    <Content Include="Views\MyAccount\Login.cshtml" />
+    <Content Include="Views\Servicios\RegistroAlumnos.cshtml" />
+    <Content Include="Views\Servicios\Reporte.cshtml" />
     <Content Include="Views\Shared\_PlantillaIndexResponsiva.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\_plantillaLogin.cshtml" />
+    <Content Include="Views\Cafeteria\BuscarCliente.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -390,7 +363,6 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Content\assets\ico\" />
     <Folder Include="Content\Plantilla\fonts\" />
     <Folder Include="Content\Plantilla\js\" />
     <Folder Include="Content\SERVCSS\fonts\" />

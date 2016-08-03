@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using System.Data.SqlClient;
 namespace WebApplication2.Controllers
 {
+    [Authorize]
     public class ServiciosController : Controller
     {
         // GET: Servicios
@@ -41,9 +42,10 @@ namespace WebApplication2.Controllers
         }
 
         [HttpGet]
-        public ActionResult RegistroAlumnos()
+        public ActionResult RegistroAlumnos(string searchBy, string search)
         {
-            return View();
+            MyDatabaseEntities db = new MyDatabaseEntities();
+            return View(db.Padres.Where(x => x.Usuario == search || search == null).ToList());
         }
 
         [HttpPost]
@@ -56,5 +58,22 @@ namespace WebApplication2.Controllers
         {
             return View();
         }
+      
+        public ActionResult Reporte()
+        {
+            MyDatabaseEntities dc = new MyDatabaseEntities();
+            return View(dc.Padres.ToList());
+           
+        }
+        public ActionResult Reportealumnos()
+        {
+            MyDatabaseEntities dc = new MyDatabaseEntities();
+            return View(dc.Alumnos.ToList());
+
+        }
+
+
+
+
     }
 }

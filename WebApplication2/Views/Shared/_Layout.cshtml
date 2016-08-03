@@ -38,7 +38,7 @@
         {
             if (Request.FilePath.Contains("Cafeteria"))
             {
-                @Html.ActionLink("Reporte de ventas", "ReporteVentas", "Cafeteria")
+                @Html.ActionLink("Cafeteria", "Cafeteria", "Cafeteria")
             }
 
             using (Html.BeginForm("Logout", "MyAccount", FormMethod.Post, new { id = "logoutform" }))
