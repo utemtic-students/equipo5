@@ -399,5 +399,6 @@ D:\Users\SLIFER\Documents\GitHub\kidscoin\WebApplication2\bin\es\System.Web.Webp
 D:\Users\SLIFER\Documents\GitHub\kidscoin\WebApplication2\bin\es\System.Web.Webpages.Razor.resources.dll
 D:\Users\SLIFER\Documents\GitHub\kidscoin\WebApplication2\bin\es\System.Web.Helpers.resources.dll
 D:\Users\SLIFER\Documents\GitHub\kidscoin\WebApplication2\bin\es\System.Web.Mvc.resources.dll
+D:\Users\SLIFER\Documents\GitHub\kidscoin\WebApplication2\obj\Debug\Kidscoin.csprojResolveAssemblyReference.cache
 D:\Users\SLIFER\Documents\GitHub\kidscoin\WebApplication2\obj\Debug\WebApplication2.dll
 D:\Users\SLIFER\Documents\GitHub\kidscoin\WebApplication2\obj\Debug\WebApplication2.pdb
