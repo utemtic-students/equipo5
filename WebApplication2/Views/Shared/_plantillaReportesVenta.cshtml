@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>KidsCoin | Reporte de ventas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width" />
+    <meta name="author" content="Eduardo Hernández">
+    <meta name="description" content="KidsCoin | Reporte de ventas" />
+    <meta charset="UTF-8">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+
+   
+    <script src="@Url.Content("~/Content/ReporteVenta/")js/jquery.min.js"></script>
+    <script src="@Url.Content("~/Content/ReporteVenta/")js/skel.min.js"></script>
+    <script src="@Url.Content("~/Content/ReporteVenta/")js/skel-layers.min.js"></script>
+    <script src="@Url.Content("~/Content/ReporteVenta/")js/init.js"></script>
+
+   
+    <link rel="stylesheet" href="@Url.Content("~/Content/ReporteVenta/")css/style.css" />
+    <link rel="stylesheet" href="@Url.Content("~/Content/ReporteVenta/")css/style-xlarge.css" />
+    <link rel="stylesheet" href="@Url.Content("~/Content/ReporteVenta/")css/style-medium.css" />
+    <link rel="stylesheet" href="@Url.Content("~/Content/ReporteVenta/")css/style-small.css" />
+    <link rel="stylesheet" href="@Url.Content("~/Content/ReporteVenta/")css/style-xsmall.css" />
+    <link rel="shortcut icon" type="image/ico" href="@Url.Content("~/Content/ReporteVenta/")img/logo.ico">
+    <!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+
+</head>
+<body class="landing">
+
+    <!-- Header -->
+    <header id="header">
+        <h1>@Html.ActionLink("KidsCoin", "Index", "Home")</h1>
+        <nav id="nav">
+            <ul>
+                @{
+                    <li>Hola, @(Request.IsAuthenticated ? HttpContext.Current.User.Identity.Name : "Invitado")</li>
+                    //<li>@Html.ActionLink("Inicio", "Index", "Home")</li>
+                    if (Request.IsAuthenticated)
+                    {
+                        if (ViewData["rol"].Equals("cafeteria"))
+                        {
+                            <li>@Html.ActionLink("Cafetería", "Cafeteria", "Cafeteria")</li>
+                        }
+                       <li>@Html.ActionLink("Cerrar sesión", "Logout", "MyAccount")</li>
+                    }
+                    else
+                    {
+                        
+                        <li>@Html.ActionLink("Iniciar sesión", "Login", "MyAccount")</li>
+                    }
+                }
+            </ul>
+        </nav>
+    </header>
+    <section id="banner">
+        <div style="width:335px; height:75px"></div>
+        <ul class="actions">
+            <li>
+
+            </li>
+        </ul>
+    </section>
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>

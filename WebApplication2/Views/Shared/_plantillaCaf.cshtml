@@ -1,11 +1,11 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>KidsCoin</title>
+    <title>KidsCoin | Cafeteria</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="viewport" content="width=device-width" />
     <meta name="author" content="Eduardo Hernández">
-    <meta name="description" content="KidsCoin" />
+    <meta name="description" content="KidsCoin|Cafeteria" />
     <meta charset="UTF-8">
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="description" content="" />
@@ -47,13 +47,8 @@
                         if (ViewData["rol"].Equals("cafeteria"))
                         {
                             <li>@Html.ActionLink("Reporte de ventas", "ReporteVentas", "Cafeteria")</li>
-                            <li>@Html.ActionLink("Cafetería", "Cafeteria", "Cafeteria")</li>
                         }
-
-                        using (Html.BeginForm("Logout", "MyAccount", FormMethod.Post, new { id = "logoutform" }))
-                        {
-                            <li><a href="javascript:document.getElementById('logoutform').submit()">Cerrar sesión</a></li>
-                        }
+                        <li>@Html.ActionLink("Cerrar sesión", "Logout", "MyAccount")</li>
                     }
                     else
                     {
@@ -64,7 +59,7 @@
         </nav>
     </header>
     <section id="banner">
-     <div style="width:335px; height:150px"></div>
+     <div style="width:335px; height:75px"></div>
         <ul class="actions">
             <li>
 

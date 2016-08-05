@@ -40,7 +40,13 @@ namespace WebApplication2.Controllers
                     mail.To.Add(saldo.EmailID);
                     mail.From = new MailAddress("kidscoinservices@gmail.com");
                     mail.Subject = "Saldo en su cartera virtual.";
-                    string Body = "<br>Hola, " + name + ".</br>" + "<br>Este mensaje se genera automáticamente para avisarle que su saldo en KidsCoin esta por terminarse, entre a su cuenta y agrege más dinero a su cartera virtual para que sus hijos puedan seguir utilizando su credito.</br>" + "<br>Saldo actual: $"+saldo.Saldo+".</br>"+ "<br><a href='http://izeroxy-001-site1.ftempurl.com/'>Click aquí para agregar saldo.</a></br>" + "<br>Atentamente,</br>"+"<br>KidsCoin System.</br>";
+                    string Body = "<br>Hola, " +
+                        name + ".</br>" + 
+                        "<br>Este mensaje se genera automáticamente para avisarle que su saldo en KidsCoin esta por terminarse, entre a su cuenta y agrege más dinero a su cartera virtual para que sus hijos puedan seguir utilizando su crédito.</br>" +
+                        "<br>Saldo actual: $"+saldo.Saldo +".</br>"+
+                        "<br><a href='http://izeroxy-001-site1.ftempurl.com/'>Click aquí para agregar saldo.</a></br>" +
+                        "<br>Atentamente,</br>"+
+                        "<br>KidsCoin System.</br>";
                     mail.Body = Body;
                     mail.IsBodyHtml = true;
                     using(SmtpClient smtp = new SmtpClient()) { 
@@ -110,10 +116,17 @@ namespace WebApplication2.Controllers
         [AuthorizeUserAccessLevel (UserRole = "cafeteria")]
         public ActionResult ReporteVentas()
         {
+
             var rv = new List<Venta>();
             using(MyDatabaseEntities dc = new MyDatabaseEntities())
             {
                 rv = dc.Ventas.ToList();
+                string CurrentUser = HttpContext.User.Identity.Name.ToString();
+                if (CurrentUser != "")
+                {
+                    var res = dc.Users.Where(a => a.Username.Equals(CurrentUser)).FirstOrDefault();
+                    ViewData["rol"] = res.Area;
+                }
             }
             return View(rv);
         }

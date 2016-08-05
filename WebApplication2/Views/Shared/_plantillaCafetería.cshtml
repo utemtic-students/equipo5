@@ -44,11 +44,7 @@
                             {
                                 <li>@Html.ActionLink("Reporte de ventas", "ReporteVentas", "Cafeteria")</li>
                             }
-
-                            using(Html.BeginForm("Logout", "MyAccount", FormMethod.Post, new { id = "logoutform" }))
-                            {
-                                <li><a href="javascript:document.getElementById('logoutform').submit()">Cerrar sesión</a></li>
-                            }
+                            <li>@Html.ActionLink("Cerrar sesión", "Logout", "MyAccount")</li>
                         }
                         else
                         {
