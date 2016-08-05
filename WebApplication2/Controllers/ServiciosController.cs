@@ -53,9 +53,37 @@ namespace WebApplication2.Controllers
             return View();
         }
 
-        public ActionResult Crud(int id = 0)
+        [HttpGet]
+        public ActionResult FuncionInsertar()
         {
-            return View();
+            return PartialView();
+        }
+
+        [HttpPost]
+        public ActionResult FuncionInsertar(FormCollection formCollection)
+        {
+
+            if (formCollection.Count > 0)
+            {
+                Alumno alumno = new Alumno();
+                // Retrieve form data using form collection
+                alumno.Nombre = formCollection["Nombre"];
+                alumno.Apellido = formCollection["Apellido"];
+                // int id = Int32.Parse(alumno.Id_Padre);
+                alumno.Id_Padre = Int32.Parse(formCollection["Id_Padre"]);
+
+
+                AgregarAlumnos agregarAlumnos =
+                    new AgregarAlumnos();
+
+                agregarAlumnos.AgregarAlumno(alumno);
+            }
+            else
+            {
+
+            }
+            return RedirectToAction("servicios");
+          
         }
     }
 }

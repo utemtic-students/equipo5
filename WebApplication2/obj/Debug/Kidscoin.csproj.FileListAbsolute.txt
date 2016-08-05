@@ -358,3 +358,11 @@ C:\Users\jhoana Angelica\Documents\GitHub\kidscoin\WebApplication2\bin\es\System
 C:\Users\jhoana Angelica\Documents\GitHub\kidscoin\WebApplication2\obj\Debug\Kidscoin.csprojResolveAssemblyReference.cache
 C:\Users\jhoana Angelica\Documents\GitHub\kidscoin\WebApplication2\obj\Debug\WebApplication2.dll
 C:\Users\jhoana Angelica\Documents\GitHub\kidscoin\WebApplication2\obj\Debug\WebApplication2.pdb
+C:\Users\jhoana Angelica\Documents\GitHub\kidscoin\WebApplication2\bin\Newtonsoft.Json.dll
+C:\Users\jhoana Angelica\Documents\GitHub\kidscoin\WebApplication2\bin\System.Net.Http.Formatting.dll
+C:\Users\jhoana Angelica\Documents\GitHub\kidscoin\WebApplication2\bin\System.Web.Http.dll
+C:\Users\jhoana Angelica\Documents\GitHub\kidscoin\WebApplication2\bin\System.Web.Http.WebHost.dll
+C:\Users\jhoana Angelica\Documents\GitHub\kidscoin\WebApplication2\bin\Newtonsoft.Json.xml
+C:\Users\jhoana Angelica\Documents\GitHub\kidscoin\WebApplication2\bin\System.Net.Http.Formatting.xml
+C:\Users\jhoana Angelica\Documents\GitHub\kidscoin\WebApplication2\bin\System.Web.Http.xml
+C:\Users\jhoana Angelica\Documents\GitHub\kidscoin\WebApplication2\bin\System.Web.Http.WebHost.xml
