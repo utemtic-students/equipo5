@@ -1,5 +1,4 @@
 ﻿<table id="miyazaki">
-    <caption>Datos del alumno</caption>
     <thead>
         <tr><th>Nombre<th>Apellido<th>Saldo
     <tbody>
@@ -8,24 +7,27 @@
             <td>@ViewData["Apellido"]</td>
             <td>@ViewData["Saldo"]</td>
 </table>
-<form action="Ventas" method="post" onsubmit="return valida()">
+<form id="formulario" action="Ventas" method="post" onsubmit="return valida()">
     @{using (Html.BeginForm("Ventas", "Cafeteria"))
         {
 
-            <input type="hidden" name="idCliente" value="@ViewData["Id"]" />
+                <input type="hidden" name="idCliente" value="@ViewData["Id"]" />
                 <input type="hidden" name="Vendedor" value="@HttpContext.Current.User.Identity.Name" />
                 <input type="hidden" name="Fecha" value="@DateTime.Now" />
                 <input type="hidden" name="Cliente" value="@ViewData["Nombre"]" />
+                <p></p>
+                <h4>Introduce el motivo de cobro y el importe:</h4>
                 <input id="desc" type="text" placeholder="Descripción" name="DecrpVenta" value="" />
                 <input id="Monto" placeholder="Monto" type="number" name="Monto" min="1" max="@ViewData["Saldo"]" value="" />
-                <input type="submit" onsubmit="return valida()" value="Realizar" />
+                <input id="btnV" type="submit" onsubmit="return valida()" value="Vender" />
+
 
                 <script type="text/javascript">
                     function valida() {
                         campo = document.getElementById("Monto");
                         campo2 = document.getElementById("desc");
                         if (campo.value == '' || campo2.value == '') {
-                            alert('¡Hay campos vacíos!, verifíca la información.');
+                            alert('¡Hay campos vacíos!, verifica la información.');
                             return false;
                         }
                         return true;

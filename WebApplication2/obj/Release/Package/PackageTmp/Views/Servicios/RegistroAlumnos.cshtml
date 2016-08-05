@@ -1,0 +1,55 @@
+﻿@model IEnumerable<WebApplication2.Padre>
+
+@{
+    ViewBag.Title = "Registro Alumnos";
+}
+<div style="font-family:Arial">
+    <h2>Agregar Alumno</h2>
+    <p>
+        @using (@Html.BeginForm("RegistroAlumnos", "Servicios", FormMethod.Get))
+        {
+            <b>Search By:</b>
+            @Html.RadioButton("searchBy", "Usuario", true) <text>Usuario</text>
+            @Html.TextBox("search") <input type="submit" value="Buscar" />
+        }
+    </p>
+    <table border="1">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Apellido)
+            </th>
+        </tr>
+        @if (Model.Count() == 0)
+        {
+            <tr>
+                <td colspan="4">
+                    No records match search criteria
+                </td>
+            </tr>
+        }
+        else
+        {
+            foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Id)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Nombre)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Apellido)
+                    </td>
+                    
+                </tr>
+            }
+        }
+    </table>
+</div> 
