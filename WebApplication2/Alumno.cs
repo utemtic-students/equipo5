@@ -20,5 +20,6 @@ namespace WebApplication2
         public Nullable<int> Id_Padre { get; set; }
     
         public virtual Padre Padre { get; set; }
+        public virtual User User { get; set; }
     }
 }

@@ -25,36 +25,33 @@ namespace WebApplication2.Controllers
                 ViewData["Apellido"] = res.Apellido;
                 int idPadre = res.Id_Padre.Value;
 
-                var saldo = dc.Padres.Where(a => a.Id.Equals(idPadre)).FirstOrDefault();
+                var saldo = dc.Users.Where(a => a.UserID.Equals(idPadre)).FirstOrDefault();
                 ViewData["Saldo"] = saldo.Saldo;
-                string name = saldo.Nombre;
+                string name = saldo.FirstName;
                 if (saldo.Saldo > cantidad) {
 
                     var calculo = (saldo.Saldo - cantidad);
                     saldo.Saldo = calculo;
                     dc.SaveChanges();
                 }
-                if (saldo.Saldo > 50)
-                {/*
-                    PENDIENTE!!!cambiar la tabla padres y anexar los datos a la tabla users, asi mismo
-                    agregar los campos faltantes a la tabla users.
-
+                if (saldo.Saldo < 50)
+                {
                     MailMessage mail = new MailMessage();
-
-                    mail.To.Add(ejemplo@gmail.com); //destinatario
+                    mail.To.Add(saldo.EmailID);
                     mail.From = new MailAddress("kidscoinservices@gmail.com");
-                    mail.Subject = "Saldo de su cuenta"; // escribir asunto
-                    mail.Body = "Hola, " + name+".\n"+" Este mensaje se genera automáticamente par avisarle que su saldo en KidsCoin esta por terminarse, agrege más credito a su cuenta para que sus hijos puedan seguir utilizando su credito."; // escribir texto.
-
-
+                    mail.Subject = "Saldo en su cartera virtual.";
+                    string Body = "<br>Hola, " + name + ".</br>" + "<br>Este mensaje se genera automáticamente para avisarle que su saldo en KidsCoin esta por terminarse, entre a su cuenta y agrege más dinero a su cartera virtual para que sus hijos puedan seguir utilizando su credito.</br>" + "<br>Saldo actual: $"+saldo.Saldo+".</br>"+ "<br><a href='http://izeroxy-001-site1.ftempurl.com/'>Click aquí para agregar saldo.</a></br>" + "<br>Atentamente,</br>"+"<br>KidsCoin System.</br>";
+                    mail.Body = Body;
                     mail.IsBodyHtml = true;
-
-                    SmtpClient smtp = new SmtpClient();
-                    smtp.Host = "smtp.gmail.com";
-                    smtp.Credentials = new System.Net.NetworkCredential("kidscoinservices@gmail.com", "utmanzanillo");
-                    smtp.EnableSsl = true;
-                    smtp.Send(mail);
-                    */
+                    using(SmtpClient smtp = new SmtpClient()) { 
+                        smtp.Host = "smtp.gmail.com";
+                        smtp.Port = 587;
+                        smtp.UseDefaultCredentials = false;
+                        smtp.Credentials = new System.Net.NetworkCredential
+                        ("kidscoinservices@gmail.com", "utmanzanillo");// Enter seders User name and password
+                        smtp.EnableSsl = true;
+                        smtp.Send(mail);
+                    }
                 }
                 
             }
@@ -91,7 +88,7 @@ namespace WebApplication2.Controllers
                 ViewData["Nombre"] = res.Nombre;
                 ViewData["Apellido"] = res.Apellido;
                 int idPadre = res.Id_Padre.Value;
-                var saldo = dc.Padres.Where(a => a.Id.Equals(idPadre)).FirstOrDefault();
+                var saldo = dc.Users.Where(a => a.UserID.Equals(idPadre)).FirstOrDefault();
                 ViewData["Saldo"] = saldo.Saldo;
                 return PartialView (id);
         }

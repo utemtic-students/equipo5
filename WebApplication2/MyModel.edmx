@@ -36,6 +36,7 @@
           <Property Name="LastNane" Type="varchar" MaxLength="50" />
           <Property Name="Area" Type="varchar" MaxLength="50" />
           <Property Name="EmailID" Type="varchar" MaxLength="200" />
+          <Property Name="Saldo" Type="float" />
         </EntityType>
         <EntityType Name="Ventas">
           <Key>
@@ -45,16 +46,16 @@
           <Property Name="IdCliente" Type="int" Nullable="false" />
           <Property Name="Cliente" Type="varchar" MaxLength="30" Nullable="false" />
           <Property Name="Vendedor" Type="varchar" MaxLength="30" Nullable="false" />
-          <Property Name="DecrpVenta" Type="varchar" MaxLength="150" Nullable="false" />
+          <Property Name="DecrpVenta" Type="varchar" MaxLength="30" Nullable="false" />
           <Property Name="Monto" Type="float" Nullable="false" />
           <Property Name="Fecha" Type="date" Nullable="false" />
         </EntityType>
-        <Association Name="FK_Alumno_ToPadres">
-          <End Role="Padres" Type="Self.Padres" Multiplicity="0..1" />
+        <Association Name="FK_Alumno_ToUsers">
+          <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
           <End Role="Alumnos" Type="Self.Alumnos" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="Padres">
-              <PropertyRef Name="Id" />
+            <Principal Role="Users">
+              <PropertyRef Name="UserID" />
             </Principal>
             <Dependent Role="Alumnos">
               <PropertyRef Name="Id_Padre" />
@@ -72,8 +73,8 @@
           <EntitySet Name="Padres" EntityType="Self.Padres" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Ventas" EntityType="Self.Ventas" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK_Alumno_ToPadres" Association="Self.FK_Alumno_ToPadres">
-            <End Role="Padres" EntitySet="Padres" />
+          <AssociationSet Name="FK_Alumno_ToUsers" Association="Self.FK_Alumno_ToUsers">
+            <End Role="Users" EntitySet="Users" />
             <End Role="Alumnos" EntitySet="Alumnos" />
           </AssociationSet>
         </EntityContainer>
@@ -92,6 +93,8 @@
           <Property Name="LastNane" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="EmailID" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
           <Property Name="Area" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Saldo" Type="Double" />
+          <NavigationProperty Name="Alumnos" Relationship="MyDatabaseModel.FK_Alumno_ToUsers" FromRole="User" ToRole="Alumno" />
         </EntityType>
         <EntityContainer Name="MyDatabaseEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Users" EntityType="Self.User" />
@@ -108,6 +111,10 @@
             <End Role="Alumno" EntitySet="Alumnos" />
           </AssociationSet>
           <EntitySet Name="Ventas" EntityType="MyDatabaseModel.Venta" />
+          <AssociationSet Name="FK_Alumno_ToUsers" Association="MyDatabaseModel.FK_Alumno_ToUsers">
+            <End Role="User" EntitySet="Users" />
+            <End Role="Alumno" EntitySet="Alumnos" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="Padre">
           <Key>
@@ -119,7 +126,6 @@
           <Property Name="Usuario" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Contrasenia" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Alumnos" Relationship="MyDatabaseModel.FK_Alumno_ToPadres" FromRole="Padre" ToRole="Alumno" />
-          <Property Name="Saldo" Type="Double" />
         </EntityType>
         <EntityType Name="Alumno">
           <Key>
@@ -130,6 +136,7 @@
           <Property Name="Apellido" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
           <Property Name="Id_Padre" Type="Int32" />
           <NavigationProperty Name="Padre" Relationship="MyDatabaseModel.FK_Alumno_ToPadres" FromRole="Alumno" ToRole="Padre" />
+          <NavigationProperty Name="User" Relationship="MyDatabaseModel.FK_Alumno_ToUsers" FromRole="Alumno" ToRole="User" />
         </EntityType>
         <Association Name="FK_Alumno_ToPadres">
           <End Type="MyDatabaseModel.Padre" Role="Padre" Multiplicity="0..1" />
@@ -151,10 +158,22 @@
           <Property Name="IdCliente" Type="Int32" Nullable="false" />
           <Property Name="Cliente" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
           <Property Name="Vendedor" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
-          <Property Name="DecrpVenta" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="DecrpVenta" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
           <Property Name="Monto" Type="Double" Nullable="false" />
           <Property Name="Fecha" Type="DateTime" Nullable="false" Precision="0" />
         </EntityType>
+        <Association Name="FK_Alumno_ToUsers">
+          <End Type="MyDatabaseModel.User" Role="User" Multiplicity="0..1" />
+          <End Type="MyDatabaseModel.Alumno" Role="Alumno" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="Alumno">
+              <PropertyRef Name="Id_Padre" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -164,6 +183,7 @@
           <EntitySetMapping Name="Users">
             <EntityTypeMapping TypeName="MyDatabaseModel.User">
               <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="Saldo" ColumnName="Saldo" />
                 <ScalarProperty Name="Area" ColumnName="Area" />
                 <ScalarProperty Name="UserID" ColumnName="UserID" />
                 <ScalarProperty Name="Username" ColumnName="Username" />
@@ -177,7 +197,6 @@
           <EntitySetMapping Name="Padres">
             <EntityTypeMapping TypeName="MyDatabaseModel.Padre">
               <MappingFragment StoreEntitySet="Padres">
-                <ScalarProperty Name="Saldo" ColumnName="Saldo" />
                 <ScalarProperty Name="Contrasenia" ColumnName="Contrasenia" />
                 <ScalarProperty Name="Usuario" ColumnName="Usuario" />
                 <ScalarProperty Name="Apellido" ColumnName="Apellido" />

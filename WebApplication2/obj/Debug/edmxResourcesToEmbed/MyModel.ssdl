@@ -31,6 +31,7 @@
     <Property Name="LastNane" Type="varchar" MaxLength="50" />
     <Property Name="Area" Type="varchar" MaxLength="50" />
     <Property Name="EmailID" Type="varchar" MaxLength="200" />
+    <Property Name="Saldo" Type="float" />
   </EntityType>
   <EntityType Name="Ventas">
     <Key>
@@ -40,16 +41,16 @@
     <Property Name="IdCliente" Type="int" Nullable="false" />
     <Property Name="Cliente" Type="varchar" MaxLength="30" Nullable="false" />
     <Property Name="Vendedor" Type="varchar" MaxLength="30" Nullable="false" />
-    <Property Name="DecrpVenta" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="DecrpVenta" Type="varchar" MaxLength="30" Nullable="false" />
     <Property Name="Monto" Type="float" Nullable="false" />
     <Property Name="Fecha" Type="date" Nullable="false" />
   </EntityType>
-  <Association Name="FK_Alumno_ToPadres">
-    <End Role="Padres" Type="Self.Padres" Multiplicity="0..1" />
+  <Association Name="FK_Alumno_ToUsers">
+    <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
     <End Role="Alumnos" Type="Self.Alumnos" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Padres">
-        <PropertyRef Name="Id" />
+      <Principal Role="Users">
+        <PropertyRef Name="UserID" />
       </Principal>
       <Dependent Role="Alumnos">
         <PropertyRef Name="Id_Padre" />
@@ -67,8 +68,8 @@
     <EntitySet Name="Padres" EntityType="Self.Padres" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Ventas" EntityType="Self.Ventas" Schema="dbo" store:Type="Tables" />
-    <AssociationSet Name="FK_Alumno_ToPadres" Association="Self.FK_Alumno_ToPadres">
-      <End Role="Padres" EntitySet="Padres" />
+    <AssociationSet Name="FK_Alumno_ToUsers" Association="Self.FK_Alumno_ToUsers">
+      <End Role="Users" EntitySet="Users" />
       <End Role="Alumnos" EntitySet="Alumnos" />
     </AssociationSet>
   </EntityContainer>

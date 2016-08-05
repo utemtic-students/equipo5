@@ -14,6 +14,11 @@ namespace WebApplication2
     
     public partial class User
     {
+        public User()
+        {
+            this.Alumnos = new HashSet<Alumno>();
+        }
+    
         public int UserID { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
@@ -21,5 +26,8 @@ namespace WebApplication2
         public string LastNane { get; set; }
         public string EmailID { get; set; }
         public string Area { get; set; }
+        public Nullable<double> Saldo { get; set; }
+    
+        public virtual ICollection<Alumno> Alumnos { get; set; }
     }
 }
