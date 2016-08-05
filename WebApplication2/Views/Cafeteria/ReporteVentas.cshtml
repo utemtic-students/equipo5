@@ -1,13 +1,12 @@
-﻿@model List<WebApplication2.Venta>
-
+﻿
 @{
-    ViewBag.Title = "Reporte Ventas";
+    Layout = "~/Views/Shared/_plantillaReportesVenta.cshtml";
+    ViewBag.Title = "KidsCoin | Reporte de Ventas";
     var grid = new WebGrid(source: Model, canPage: true, rowsPerPage: 15);
     grid.Pager(WebGridPagerModes.All);
 }
-
 <h2>Reporte de Ventas</h2>
- 
+
 <style type="text/css">
     /*Here we will add css for style webgrid*/
     .webgrid-table {
@@ -17,7 +16,7 @@
         display: table;
         border-collapse: separate;
         border: solid 1px #98BF21;
-        background-color: white;
+        background-color: black;
     }
 
         .webgrid-table td, th {
@@ -26,8 +25,8 @@
         }
 
     .webgrid-header {
-        background-color: #A7C942;
-        color: #FFFFFF;
+        background-color: #f1c4c4;
+        color: #272130;
         padding-bottom: 4px;
         padding-top: 5px;
         text-align: left;
@@ -41,7 +40,7 @@
     }
 
     .webgrid-alternating-row {
-        background-color: #EAF2D3;
+        background-color: #808080;
         padding: 3px 7px 2px;
     }
 </style>
@@ -55,7 +54,7 @@
     rowStyle: "webgrid-row-style",
     columns: grid.Columns(
         //here i will add column for serial no
-       // grid.Column(header: "Serial No", format:@<text><div>@(item.WebGrid.Rows.IndexOf(item) + 1)</div></text>),
+        // grid.Column(header: "Serial No", format:@<text><div>@(item.WebGrid.Rows.IndexOf(item) + 1)</div></text>),
         grid.Column(columnName: "IdVenta", header: "Folio"),
         grid.Column(columnName: "idCliente", header: "Numero de cliente"),
         grid.Column(columnName: "Cliente", header: "Nombre del cliente"),
@@ -64,4 +63,5 @@
         grid.Column(columnName: "Monto", header: "Monto"),
         grid.Column(columnName: "Fecha", header: "Fecha de compra")))
 </div>
+
 

@@ -4,6 +4,7 @@
     <EntitySetMapping Name="Users">
       <EntityTypeMapping TypeName="MyDatabaseModel.User">
         <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="Saldo" ColumnName="Saldo" />
           <ScalarProperty Name="Area" ColumnName="Area" />
           <ScalarProperty Name="UserID" ColumnName="UserID" />
           <ScalarProperty Name="Username" ColumnName="Username" />
@@ -17,7 +18,6 @@
     <EntitySetMapping Name="Padres">
       <EntityTypeMapping TypeName="MyDatabaseModel.Padre">
         <MappingFragment StoreEntitySet="Padres">
-          <ScalarProperty Name="Saldo" ColumnName="Saldo" />
           <ScalarProperty Name="Contrasenia" ColumnName="Contrasenia" />
           <ScalarProperty Name="Usuario" ColumnName="Usuario" />
           <ScalarProperty Name="Apellido" ColumnName="Apellido" />
