@@ -12,5 +12,6 @@ Diana Vargas.
 
 Diana Valeria Ramírez.
 
-<a href"http://izeroxy-001-site1.ftempurl.com/">KidsCoin Página web</a>
+# Página web:
+http://izeroxy-001-site1.ftempurl.com/
 
