@@ -30,8 +30,9 @@
     <script src="~/js/html5-qrcode.min.js"></script>
 </head>
 <body>
-    <section class="billboard dark">
+   
         <header class="wrapper dark">
+            
             <nav>
                 <ul>
                     @{
@@ -44,7 +45,7 @@
                                 <li>@Html.ActionLink("Reporte de ventas", "ReporteVentas", "Cafeteria")</li>
                             }
 
-                            using (Html.BeginForm("Logout", "MyAccount", FormMethod.Post, new { id = "logoutform" }))
+                            using(Html.BeginForm("Logout", "MyAccount", FormMethod.Post, new { id = "logoutform" }))
                             {
                                 <li><a href="javascript:document.getElementById('logoutform').submit()">Cerrar sesión</a></li>
                             }
@@ -58,13 +59,9 @@
             </nav>
         </header>
 
-        <div class="caption dark animated wow fadeInDown clearfix">
-            <h1>Área de Cafetería</h1>
-            <p>En esta área usted podrá realizar los cobros y ver los registros de ventas.</p>
-            <hr>
-        </div>
+        
         <div class="shadow"></div>
-    </section><!--  End billboard  -->
+    
 
     <div>
         @RenderBody()

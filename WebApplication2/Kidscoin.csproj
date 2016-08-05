@@ -136,6 +136,35 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Cafeteria.css" />
+    <Content Include="Content\Cafeteria\css\font-awesome.min.css" />
+    <Content Include="Content\Cafeteria\css\formulario.css" />
+    <Content Include="Content\Cafeteria\css\ie\backgroundsize.min.htc" />
+    <Content Include="Content\Cafeteria\css\ie\html5shiv.js" />
+    <Content Include="Content\Cafeteria\css\ie\v8.css" />
+    <Content Include="Content\Cafeteria\css\images\overlay.png" />
+    <Content Include="Content\Cafeteria\css\skel.css" />
+    <Content Include="Content\Cafeteria\css\style-large.css" />
+    <Content Include="Content\Cafeteria\css\style-medium.css" />
+    <Content Include="Content\Cafeteria\css\style-small.css" />
+    <Content Include="Content\Cafeteria\css\style-xlarge.css" />
+    <Content Include="Content\Cafeteria\css\style-xsmall.css" />
+    <Content Include="Content\Cafeteria\css\style.css" />
+    <Content Include="Content\Cafeteria\img\billboard2.jpg" />
+    <Content Include="Content\Cafeteria\img\cafeteria-logo.jpg" />
+    <Content Include="Content\Cafeteria\img\fondo_restaurante_02.jpg" />
+    <Content Include="Content\Cafeteria\img\icon1.png" />
+    <Content Include="Content\Cafeteria\img\icon2.png" />
+    <Content Include="Content\Cafeteria\img\icon3.png" />
+    <Content Include="Content\Cafeteria\img\KidsCoin.jpg" />
+    <Content Include="Content\Cafeteria\img\logo.ico" />
+    <Content Include="Content\Cafeteria\img\paypal.png" />
+    <Content Include="Content\Cafeteria\img\pulsera.jpg" />
+    <Content Include="Content\Cafeteria\img\seguridad.png" />
+    <Content Include="Content\Cafeteria\img\tcback1.jpg" />
+    <Content Include="Content\Cafeteria\js\init.js" />
+    <Content Include="Content\Cafeteria\js\jquery.min.js" />
+    <Content Include="Content\Cafeteria\js\skel-layers.min.js" />
+    <Content Include="Content\Cafeteria\js\skel.min.js" />
     <Content Include="Content\NewIndex\css\font-awesome.min.css" />
     <Content Include="Content\NewIndex\css\ie\backgroundsize.min.htc" />
     <Content Include="Content\NewIndex\css\ie\html5shiv.js" />
@@ -209,8 +238,8 @@
     <Content Include="Content\tablaCafeteria.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="js\html5-qrcode.min.js" />
-    <Content Include="js\jsqrcode-combined.min.js" />
+    <Content Include="Content\js\html5-qrcode.min.js" />
+    <Content Include="Content\js\jsqrcode-combined.min.js" />
     <Content Include="logo.ico" />
     <Content Include="MyModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -272,6 +301,7 @@
     <Content Include="Content\NewIndex\fonts\fontawesome-webfont.ttf" />
     <Content Include="Content\NewIndex\fonts\fontawesome-webfont.woff" />
     <Content Include="Content\NewIndex\fonts\FontAwesome.otf" />
+    <Content Include="Views\Shared\_plantillaCaf.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -336,7 +366,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Home\Padres.cshtml" />
-    <Content Include="Views\Cafeteria\Cafeteria.cshtml" />
     <Content Include="Views\Shared\_myplantilla.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\_plantillaCafetería.cshtml" />
@@ -352,6 +381,7 @@
     <Content Include="Views\Shared\_PlantillaIndexResponsiva.cshtml" />
     <Content Include="Views\Shared\_plantillaLogin.cshtml" />
     <Content Include="Views\Cafeteria\BuscarCliente.cshtml" />
+    <Content Include="Views\Cafeteria\Cafeteria.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
