@@ -1,4 +1,4 @@
-# kidscoin
+# Kidscoin
 System that acts as virtual wallet for preschool children, for so children do not have
 to carry cash.
 
@@ -12,6 +12,6 @@ Diana Vargas.
 
 Diana Valeria Ramírez.
 
-# Página web:
+# Web page:
 http://izeroxy-001-site1.ftempurl.com/
 
