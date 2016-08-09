@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using WebApplication2;
+
 
 
 namespace WebApplication2.Controllers
@@ -34,7 +34,17 @@ namespace WebApplication2.Controllers
         [AuthorizeUserAccessLevel(UserRole = "padres")]
         public ActionResult Padres()
         {
+            MyDatabaseEntities dc = new MyDatabaseEntities();
+
+            string CurrentUser = HttpContext.User.Identity.Name.ToString();
+            if (CurrentUser != "")
+            {
+                var res = dc.Users.Where(a => a.Username.Equals(CurrentUser)).FirstOrDefault();
+                ViewData["ID"] = res.UserID;
+            }
+
             return View();
         }
+       
     }
 }
