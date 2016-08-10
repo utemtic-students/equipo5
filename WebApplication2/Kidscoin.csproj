@@ -419,6 +419,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Alumno.cs" />
     <Compile Include="Models\GetDataPaypal.cs" />
     <Compile Include="Models\Login.cs" />
     <Compile Include="Models\Order.cs" />
@@ -482,6 +483,8 @@
     <Content Include="Views\Shared\_plantillaPadres.cshtml" />
     <Content Include="Views\Padres\Index.cshtml" />
     <Content Include="Views\Padres\acreditacionPaypal.cshtml" />
+    <Content Include="Views\Padres\Hijos.cshtml" />
+    <Content Include="Views\Padres\prueba.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

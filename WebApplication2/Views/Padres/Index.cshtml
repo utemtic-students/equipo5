@@ -4,6 +4,20 @@
     Layout = "~/Views/Shared/_plantillaPadres.cshtml";
 }
 
+<h3>Hola, @ViewData["Nombre"].<br />
+   Esta es la información de tus hijos registrados, si hay algun error contacta al soporte para una corrección de información.<br />
+    </h3>
+
+
+
+@{Html.RenderAction("Hijos","Padres", new { id = ViewData["id"] });}
+
+<p>
+    <h2>
+        Su saldo actual es: $@ViewData["saldo"].<br />
+        Si quiere agregar mas saldo, por favor ingrese una cantidad y continue con el proceso de pago.<br />
+    </h2>
+</p>
 Pago por paypal
 
 <form action="@ConfigurationManager.AppSettings["urlSubmitPayment"]">
