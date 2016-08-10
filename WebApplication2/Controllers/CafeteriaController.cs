@@ -96,6 +96,7 @@ namespace WebApplication2.Controllers
                 int idPadre = res.Id_Padre.Value;
                 var saldo = dc.Users.Where(a => a.UserID.Equals(idPadre)).FirstOrDefault();
                 ViewData["Saldo"] = saldo.Saldo;
+
                 return PartialView (id);
         }
 
@@ -130,7 +131,5 @@ namespace WebApplication2.Controllers
             }
             return View(rv);
         }
-
-
     }
 }

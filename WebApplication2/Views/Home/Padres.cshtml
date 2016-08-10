@@ -1,6 +1,23 @@
-﻿
+﻿@using System.Configuration
 @{
     ViewBag.Title = "Padres";
 }
 
 <h3>Bienvenido(a) @(Request.IsAuthenticated ? HttpContext.Current.User.Identity.Name : "Guest") - Esta es la sección de padres.</h3>
+
+Pago por paypal
+
+        <form action="@ConfigurationManager.AppSettings["urlSubmitPayment"]">
+            <input type="hidden" name="cmd" value="_xclick" />
+            <input type="hidden" name="upload" value="1" />
+            <input type="hidden" name="return" value="@ConfigurationManager.AppSettings["urlReturn"]" />
+            <input type="hidden" name="business" value="@ConfigurationManager.AppSettings["accountBusiness"]" />
+            <input type="hidden" name="item_name" value="Agregar saldo a KidsCoin" />
+            <input type="hidden" name="item_number" value="@ViewData["ID"]" />
+            <input type="number" min="1" name="amount" value="" placeholder="Agrege cantidad" />
+            
+            <br />
+            <div class="col-md-12">
+                <input type="submit" value="Procesar solicitud" class="btn btn-primary col-md-12" />
+            </div>
+        </form>

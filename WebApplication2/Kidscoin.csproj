@@ -203,6 +203,43 @@
     <Content Include="Content\NewIndex\js\jquery.min.js" />
     <Content Include="Content\NewIndex\js\skel-layers.min.js" />
     <Content Include="Content\NewIndex\js\skel.min.js" />
+    <Content Include="Content\Padres\css\font-awesome.min.css" />
+    <Content Include="Content\Padres\css\formulario.css" />
+    <Content Include="Content\Padres\css\ie\backgroundsize.min.htc" />
+    <Content Include="Content\Padres\css\ie\html5shiv.js" />
+    <Content Include="Content\Padres\css\ie\v8.css" />
+    <Content Include="Content\Padres\css\images\overlay.png" />
+    <Content Include="Content\Padres\css\skel.css" />
+    <Content Include="Content\Padres\css\style-large.css" />
+    <Content Include="Content\Padres\css\style-medium.css" />
+    <Content Include="Content\Padres\css\style-small.css" />
+    <Content Include="Content\Padres\css\style-xlarge.css" />
+    <Content Include="Content\Padres\css\style-xsmall.css" />
+    <Content Include="Content\Padres\css\style.css" />
+    <Content Include="Content\Padres\img\bandana.jpg" />
+    <Content Include="Content\Padres\img\billboard2.jpg" />
+    <Content Include="Content\Padres\img\butterfly-wallpaper.jpeg" />
+    <Content Include="Content\Padres\img\cafeteria-logo.jpg" />
+    <Content Include="Content\Padres\img\fondo_restaurante_02.jpg" />
+    <Content Include="Content\Padres\img\HD-Wallpapers1.jpeg" />
+    <Content Include="Content\Padres\img\hipster-wallpapers-21.jpg" />
+    <Content Include="Content\Padres\img\i-should-buy-a-boat.jpg" />
+    <Content Include="Content\Padres\img\icon1.png" />
+    <Content Include="Content\Padres\img\icon2.png" />
+    <Content Include="Content\Padres\img\icon3.png" />
+    <Content Include="Content\Padres\img\Ieh3JH.jpg" />
+    <Content Include="Content\Padres\img\KidsCoin.jpg" />
+    <Content Include="Content\Padres\img\logo.ico" />
+    <Content Include="Content\Padres\img\paypal.png" />
+    <Content Include="Content\Padres\img\Pear-Rain-Photography_1.jpg" />
+    <Content Include="Content\Padres\img\pulsera.jpg" />
+    <Content Include="Content\Padres\img\seguridad.png" />
+    <Content Include="Content\Padres\img\tcback1.jpg" />
+    <Content Include="Content\Padres\img\vintage-wallpaper-14.jpg" />
+    <Content Include="Content\Padres\js\init.js" />
+    <Content Include="Content\Padres\js\jquery.min.js" />
+    <Content Include="Content\Padres\js\skel-layers.min.js" />
+    <Content Include="Content\Padres\js\skel.min.js" />
     <Content Include="Content\Plantilla\css\animate.css" />
     <Content Include="Content\Plantilla\css\fancybox-buttons.css" />
     <Content Include="Content\Plantilla\css\fancybox-thumbs.css" />
@@ -346,6 +383,14 @@
     <Content Include="Content\NewIndex\fonts\fontawesome-webfont.ttf" />
     <Content Include="Content\NewIndex\fonts\fontawesome-webfont.woff" />
     <Content Include="Content\NewIndex\fonts\FontAwesome.otf" />
+    <None Include="Scripts\jquery-2.1.4.intellisense.js" />
+    <Content Include="Scripts\jquery-2.1.4.js" />
+    <Content Include="Scripts\jquery-2.1.4.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Views\Shared\_plantillaCaf.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -368,13 +413,18 @@
     <Compile Include="Controllers\CafeteriaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MyAccountController.cs" />
+    <Compile Include="Controllers\PadresController.cs" />
     <Compile Include="Controllers\pruebaController.cs" />
     <Compile Include="Controllers\ServiciosController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Alumno.cs" />
+    <Compile Include="Models\GetDataPaypal.cs" />
     <Compile Include="Models\Login.cs" />
+    <Compile Include="Models\Order.cs" />
     <Compile Include="Models\Padre.cs" />
+    <Compile Include="Models\Product.cs" />
     <Compile Include="MyModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -428,6 +478,13 @@
     <Content Include="Views\Cafeteria\Cafeteria.cshtml" />
     <Content Include="Views\Shared\_plantillaReportesVenta.cshtml" />
     <Content Include="Views\Cafeteria\ReporteVentas.cshtml" />
+    <Content Include="Scripts\jquery-2.1.4.min.map" />
+    <Content Include="Views\Home\acreditacionPaypal.cshtml" />
+    <Content Include="Views\Shared\_plantillaPadres.cshtml" />
+    <Content Include="Views\Padres\Index.cshtml" />
+    <Content Include="Views\Padres\acreditacionPaypal.cshtml" />
+    <Content Include="Views\Padres\Hijos.cshtml" />
+    <Content Include="Views\Padres\prueba.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

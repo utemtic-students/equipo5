@@ -35,7 +35,7 @@ namespace WebApplication2.Controllers
                     }
                     if (user.Area == "padres")
                     {
-                        return RedirectToAction("Padres", "HOme");
+                        return RedirectToAction("Index", "Padres");
                     }
                 }
             }

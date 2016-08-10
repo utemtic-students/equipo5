@@ -47,6 +47,10 @@
                             <li>@Html.ActionLink("Reporte de ventas", "ReporteVentas", "Cafeteria")</li>
                             <li>@Html.ActionLink("Cafetería", "Cafeteria", "Cafeteria")</li>
                         }
+                        if (ViewData["rol"].Equals("padres"))
+                        {
+                            <li>@Html.ActionLink("Cuenta", "Index", "Padres")</li>
+                        }
                             <li>@Html.ActionLink("Cerrar sesión", "Logout", "MyAccount")</li>
                     }
                     else
