@@ -9,17 +9,6 @@
     <Property Name="Apellido" Type="nchar" MaxLength="10" />
     <Property Name="Id_Padre" Type="int" />
   </EntityType>
-  <EntityType Name="Padres">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Nombre" Type="varchar" MaxLength="50" />
-    <Property Name="Apellido" Type="varchar" MaxLength="50" />
-    <Property Name="Usuario" Type="varchar" MaxLength="50" />
-    <Property Name="Contrasenia" Type="varchar" MaxLength="50" />
-    <Property Name="Saldo" Type="float" />
-  </EntityType>
   <EntityType Name="Users">
     <Key>
       <PropertyRef Name="UserID" />
@@ -58,14 +47,16 @@
     </ReferentialConstraint>
   </Association>
   <Function Name="agregarpadres" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-    <Parameter Name="Nombre" Type="varchar" Mode="In" />
-    <Parameter Name="Apellido" Type="varchar" Mode="In" />
-    <Parameter Name="Usuario" Type="varchar" Mode="In" />
-    <Parameter Name="Contrasenia" Type="varchar" Mode="In" />
+    <Parameter Name="Username" Type="varchar" Mode="In" />
+    <Parameter Name="Password" Type="varchar" Mode="In" />
+    <Parameter Name="FirstName" Type="varchar" Mode="In" />
+    <Parameter Name="LastNane" Type="varchar" Mode="In" />
+    <Parameter Name="Area" Type="varchar" Mode="In" />
+    <Parameter Name="EmailID" Type="varchar" Mode="In" />
+    <Parameter Name="Saldo" Type="float" Mode="In" />
   </Function>
   <EntityContainer Name="MyDatabaseModelStoreContainer">
     <EntitySet Name="Alumnos" EntityType="Self.Alumnos" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="Padres" EntityType="Self.Padres" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Ventas" EntityType="Self.Ventas" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK_Alumno_ToUsers" Association="Self.FK_Alumno_ToUsers">

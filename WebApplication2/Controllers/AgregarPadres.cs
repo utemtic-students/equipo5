@@ -10,7 +10,7 @@ namespace WebApplication2.Controllers
 {
     public class AgregarPadres
     {
-        public void AgregarPadre(Padre padre)
+        public void AgregarPadre(User user)
         {
            
             
@@ -18,7 +18,7 @@ namespace WebApplication2.Controllers
             {
 
 
-                dc.Padres.Add(padre);
+                dc.Users.Add(user);
                 dc.SaveChanges();
                 
                

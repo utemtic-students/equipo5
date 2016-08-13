@@ -14,17 +14,6 @@
           <Property Name="Apellido" Type="nchar" MaxLength="10" />
           <Property Name="Id_Padre" Type="int" />
         </EntityType>
-        <EntityType Name="Padres">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Nombre" Type="varchar" MaxLength="50" />
-          <Property Name="Apellido" Type="varchar" MaxLength="50" />
-          <Property Name="Usuario" Type="varchar" MaxLength="50" />
-          <Property Name="Contrasenia" Type="varchar" MaxLength="50" />
-          <Property Name="Saldo" Type="float" />
-        </EntityType>
         <EntityType Name="Users">
           <Key>
             <PropertyRef Name="UserID" />
@@ -63,14 +52,16 @@
           </ReferentialConstraint>
         </Association>
         <Function Name="agregarpadres" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="Nombre" Type="varchar" Mode="In" />
-          <Parameter Name="Apellido" Type="varchar" Mode="In" />
-          <Parameter Name="Usuario" Type="varchar" Mode="In" />
-          <Parameter Name="Contrasenia" Type="varchar" Mode="In" />
+          <Parameter Name="Username" Type="varchar" Mode="In" />
+          <Parameter Name="Password" Type="varchar" Mode="In" />
+          <Parameter Name="FirstName" Type="varchar" Mode="In" />
+          <Parameter Name="LastNane" Type="varchar" Mode="In" />
+          <Parameter Name="Area" Type="varchar" Mode="In" />
+          <Parameter Name="EmailID" Type="varchar" Mode="In" />
+          <Parameter Name="Saldo" Type="float" Mode="In" />
         </Function>
         <EntityContainer Name="MyDatabaseModelStoreContainer">
           <EntitySet Name="Alumnos" EntityType="Self.Alumnos" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Padres" EntityType="Self.Padres" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Ventas" EntityType="Self.Ventas" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_Alumno_ToUsers" Association="Self.FK_Alumno_ToUsers">
@@ -98,35 +89,22 @@
         </EntityType>
         <EntityContainer Name="MyDatabaseEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Users" EntityType="Self.User" />
-          <EntitySet Name="Padres" EntityType="MyDatabaseModel.Padre" />
           <FunctionImport Name="agregarpadres">
-            <Parameter Name="Nombre" Mode="In" Type="String" />
-            <Parameter Name="Apellido" Mode="In" Type="String" />
-            <Parameter Name="Usuario" Mode="In" Type="String" />
-            <Parameter Name="Contrasenia" Mode="In" Type="String" />
+            <Parameter Name="Username" Mode="In" Type="String" />
+            <Parameter Name="Password" Mode="In" Type="String" />
+            <Parameter Name="FirstName" Mode="In" Type="String" />
+            <Parameter Name="LastNane" Mode="In" Type="String" />
+            <Parameter Name="Area" Mode="In" Type="String" />
+            <Parameter Name="EmailID" Mode="In" Type="String" />
+            <Parameter Name="Saldo" Mode="In" Type="Double" />
           </FunctionImport>
           <EntitySet Name="Alumnos" EntityType="MyDatabaseModel.Alumno" />
-          <AssociationSet Name="FK_Alumno_ToPadres" Association="MyDatabaseModel.FK_Alumno_ToPadres">
-            <End Role="Padre" EntitySet="Padres" />
-            <End Role="Alumno" EntitySet="Alumnos" />
-          </AssociationSet>
           <EntitySet Name="Ventas" EntityType="MyDatabaseModel.Venta" />
           <AssociationSet Name="FK_Alumno_ToUsers" Association="MyDatabaseModel.FK_Alumno_ToUsers">
             <End Role="User" EntitySet="Users" />
             <End Role="Alumno" EntitySet="Alumnos" />
           </AssociationSet>
         </EntityContainer>
-        <EntityType Name="Padre">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Apellido" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Usuario" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Contrasenia" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="Alumnos" Relationship="MyDatabaseModel.FK_Alumno_ToPadres" FromRole="Padre" ToRole="Alumno" />
-        </EntityType>
         <EntityType Name="Alumno">
           <Key>
             <PropertyRef Name="Id_Hijo" />
@@ -135,21 +113,8 @@
           <Property Name="Nombre" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
           <Property Name="Apellido" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
           <Property Name="Id_Padre" Type="Int32" />
-          <NavigationProperty Name="Padre" Relationship="MyDatabaseModel.FK_Alumno_ToPadres" FromRole="Alumno" ToRole="Padre" />
           <NavigationProperty Name="User" Relationship="MyDatabaseModel.FK_Alumno_ToUsers" FromRole="Alumno" ToRole="User" />
         </EntityType>
-        <Association Name="FK_Alumno_ToPadres">
-          <End Type="MyDatabaseModel.Padre" Role="Padre" Multiplicity="0..1" />
-          <End Type="MyDatabaseModel.Alumno" Role="Alumno" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Padre">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="Alumno">
-              <PropertyRef Name="Id_Padre" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <EntityType Name="Venta">
           <Key>
             <PropertyRef Name="IdVenta" />
@@ -191,17 +156,6 @@
                 <ScalarProperty Name="FirstName" ColumnName="FirstName" />
                 <ScalarProperty Name="LastNane" ColumnName="LastNane" />
                 <ScalarProperty Name="EmailID" ColumnName="EmailID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Padres">
-            <EntityTypeMapping TypeName="MyDatabaseModel.Padre">
-              <MappingFragment StoreEntitySet="Padres">
-                <ScalarProperty Name="Contrasenia" ColumnName="Contrasenia" />
-                <ScalarProperty Name="Usuario" ColumnName="Usuario" />
-                <ScalarProperty Name="Apellido" ColumnName="Apellido" />
-                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
-                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

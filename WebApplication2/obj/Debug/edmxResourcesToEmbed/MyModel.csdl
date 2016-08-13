@@ -16,35 +16,22 @@
   </EntityType>
   <EntityContainer Name="MyDatabaseEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Users" EntityType="Self.User" />
-    <EntitySet Name="Padres" EntityType="MyDatabaseModel.Padre" />
     <FunctionImport Name="agregarpadres">
-      <Parameter Name="Nombre" Mode="In" Type="String" />
-      <Parameter Name="Apellido" Mode="In" Type="String" />
-      <Parameter Name="Usuario" Mode="In" Type="String" />
-      <Parameter Name="Contrasenia" Mode="In" Type="String" />
+      <Parameter Name="Username" Mode="In" Type="String" />
+      <Parameter Name="Password" Mode="In" Type="String" />
+      <Parameter Name="FirstName" Mode="In" Type="String" />
+      <Parameter Name="LastNane" Mode="In" Type="String" />
+      <Parameter Name="Area" Mode="In" Type="String" />
+      <Parameter Name="EmailID" Mode="In" Type="String" />
+      <Parameter Name="Saldo" Mode="In" Type="Double" />
     </FunctionImport>
     <EntitySet Name="Alumnos" EntityType="MyDatabaseModel.Alumno" />
-    <AssociationSet Name="FK_Alumno_ToPadres" Association="MyDatabaseModel.FK_Alumno_ToPadres">
-      <End Role="Padre" EntitySet="Padres" />
-      <End Role="Alumno" EntitySet="Alumnos" />
-    </AssociationSet>
     <EntitySet Name="Ventas" EntityType="MyDatabaseModel.Venta" />
     <AssociationSet Name="FK_Alumno_ToUsers" Association="MyDatabaseModel.FK_Alumno_ToUsers">
       <End Role="User" EntitySet="Users" />
       <End Role="Alumno" EntitySet="Alumnos" />
     </AssociationSet>
   </EntityContainer>
-  <EntityType Name="Padre">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="Apellido" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="Usuario" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="Contrasenia" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <NavigationProperty Name="Alumnos" Relationship="MyDatabaseModel.FK_Alumno_ToPadres" FromRole="Padre" ToRole="Alumno" />
-  </EntityType>
   <EntityType Name="Alumno">
     <Key>
       <PropertyRef Name="Id_Hijo" />
@@ -53,21 +40,8 @@
     <Property Name="Nombre" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
     <Property Name="Apellido" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
     <Property Name="Id_Padre" Type="Int32" />
-    <NavigationProperty Name="Padre" Relationship="MyDatabaseModel.FK_Alumno_ToPadres" FromRole="Alumno" ToRole="Padre" />
     <NavigationProperty Name="User" Relationship="MyDatabaseModel.FK_Alumno_ToUsers" FromRole="Alumno" ToRole="User" />
   </EntityType>
-  <Association Name="FK_Alumno_ToPadres">
-    <End Type="MyDatabaseModel.Padre" Role="Padre" Multiplicity="0..1" />
-    <End Type="MyDatabaseModel.Alumno" Role="Alumno" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Padre">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="Alumno">
-        <PropertyRef Name="Id_Padre" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <EntityType Name="Venta">
     <Key>
       <PropertyRef Name="IdVenta" />
