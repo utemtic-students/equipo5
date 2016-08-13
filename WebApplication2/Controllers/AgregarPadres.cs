@@ -10,18 +10,18 @@ namespace WebApplication2.Controllers
 {
     public class AgregarPadres
     {
-        public void AgregarPadre(Padre padre)
+        public void AgregarPadre(User user)
         {
-           
-            
+
+
             using (MyDatabaseEntities dc = new MyDatabaseEntities())
             {
 
 
-                dc.Padres.Add(padre);
+                dc.Users.Add(user);
                 dc.SaveChanges();
-                
-               
+
+
             }
         }
 

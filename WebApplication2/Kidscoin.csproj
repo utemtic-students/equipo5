@@ -407,6 +407,7 @@
       <DependentUpon>MyModel.tt</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AgregarAlumnos.cs" />
     <Compile Include="Controllers\AgregarPadres.cs" />
     <Compile Include="Controllers\agregarVenta.cs" />
     <Compile Include="Controllers\AuthorizeUserAccessLevel.cs" />
@@ -485,6 +486,7 @@
     <Content Include="Views\Padres\acreditacionPaypal.cshtml" />
     <Content Include="Views\Padres\Hijos.cshtml" />
     <Content Include="Views\Padres\prueba.cshtml" />
+    <Content Include="Views\Servicios\FuncionInsertar.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

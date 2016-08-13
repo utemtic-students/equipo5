@@ -27,12 +27,15 @@ namespace WebApplication2.Controllers
         [HttpPost]
         public ActionResult RegistroPadres(FormCollection formCollection)
         {
-            Padre padre = new Padre();
+            User padre = new User();
             // Retrieve form data using form collection
-            padre.Nombre = formCollection["Nombre"];
-            padre.Apellido = formCollection["Apellido"];
-            padre.Usuario = formCollection["Usuario"];
-            padre.Contrasenia =formCollection["Contrasenia"];
+            padre.Username = formCollection["UserName"];
+            padre.Password = formCollection["Password"];
+            padre.FirstName = formCollection["FirstName"];
+            padre.LastNane = formCollection["LastNane"];
+            padre.Area = formCollection["Area"];
+            padre.EmailID = formCollection["EmailID"];
+            padre.Saldo = float.Parse(formCollection["Saldo"]);
 
             AgregarPadres agregarPadres =
                 new AgregarPadres();
@@ -41,18 +44,45 @@ namespace WebApplication2.Controllers
             return RedirectToAction("servicios");
         }
 
+
         [HttpGet]
         public ActionResult RegistroAlumnos(string searchBy, string search)
         {
             MyDatabaseEntities db = new MyDatabaseEntities();
-            return View(db.Padres.Where(x => x.Usuario == search || search == null).ToList());
+            return View(db.Users.Where(x => x.Username == search || search == null).ToList());
         }
 
-        [HttpPost]
-        public ActionResult Registro_Alumno(FormCollection formCollection)
+
+       
+        [HttpGet]
+        public ActionResult FuncionInsertar()
         {
             return View();
         }
+
+        [HttpPost]
+        public ActionResult FuncionInsertar(FormCollection formCollection)
+        {
+
+            if (formCollection.Count > 0)
+            {
+                Alumno alumno = new Alumno();
+                // Retrieve form data using form collection
+                alumno.Nombre = formCollection["Nombre"];
+                alumno.Apellido = formCollection["Apellido"];
+                // int id = Int32.Parse(alumno.Id_Padre);
+                alumno.Id_Padre = Int32.Parse(formCollection["Id_Padre"]);
+
+                AgregarAlumnos agregarAlumnos =
+                    new AgregarAlumnos();
+
+                agregarAlumnos.AgregarAlumno(alumno);
+            }
+
+            return RedirectToAction("servicios");
+
+        }
+
 
         public ActionResult Crud(int id = 0)
         {
