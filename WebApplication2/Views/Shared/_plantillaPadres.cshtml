@@ -20,15 +20,12 @@
     <script src="@Url.Content("~/Content/")js/jquery-1.9.1.min.js"></script>
     <script src="@Url.Content("~/Content/")js/jsqrcode-combined.min.js"></script>
     <script src="@Url.Content("~/Content/")js/html5-qrcode.min.js"></script>
+    
+    <link rel="stylesheet" href="@Url.Content("~/Content/Padres/")css/bootstrap.css" />
+    <link rel="stylesheet" href="@Url.Content("~/Content/Padres/")css/bootstrap.min.css" />
+    <link rel="stylesheet" href="@Url.Content("~/Content/Padres/")css/modern-business.css" />
+    <link rel="stylesheet" href="@Url.Content("~/Content/Padres/")font-awesome/css/font-awesome.min.css" />
 
-    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/")tablaCafeteria.css">
-    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/Padres/css/")formulario.css">
-    <link rel="stylesheet" href="@Url.Content("~/Content/Padres/")css/style.css" />
-    <link rel="stylesheet" href="@Url.Content("~/Content/Padres/")css/style-xlarge.css" />
-    <link rel="stylesheet" href="@Url.Content("~/Content/Padres/")css/style-medium.css" />
-    <link rel="stylesheet" href="@Url.Content("~/Content/Padres/")css/style-small.css" />
-    <link rel="stylesheet" href="@Url.Content("~/Content/Padres/")css/style-xsmall.css" />
-    <link rel="stylesheet" href="@Url.Content("~/Content/")bootstrap.min.css" />
     <link rel="shortcut icon" type="image/ico" href="@Url.Content("~/Content/Padres/")img/logo.ico">
     <!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
 
@@ -36,40 +33,60 @@
 <body class="landing">
 
     <!-- Header -->
-    <header id="header">
-        <h1>@Html.ActionLink("KidsCoin", "Index", "Home")</h1>
-        <nav id="nav">
-            <ul>
-                @{
-                    <li>Hola, @(Request.IsAuthenticated ? HttpContext.Current.User.Identity.Name : "Invitado")</li>
-                    //<li>@Html.ActionLink("Inicio", "Index", "Home")</li>
-                    if (Request.IsAuthenticated)
-                    {
-                        if (ViewData["rol"].Equals("padres"))
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <h2>
+                    <a class="navbar-brand" id="header">
+                        @Html.ActionLink("KidsCoin", "Index", "Home")
+                    </a>
+                </h2>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    @{
+                        <li><a href="">Hola, @(Request.IsAuthenticated ? HttpContext.Current.User.Identity.Name : "Invitado")</a></li>
+                        //<li>@Html.ActionLink("Inicio", "Index", "Home")</li>
+                        if (Request.IsAuthenticated)
                         {
-                            <li>@Html.ActionLink("Cuenta", "Index", "Padres")</li>
+                            if (ViewData["rol"].Equals("padres"))
+                            {
+                                <li>@Html.ActionLink("Cuenta", "Index", "Padres")</li>
+                            }
+                            <li>@Html.ActionLink("Cerrar sesión", "Logout", "MyAccount")</li>
                         }
-                        <li>@Html.ActionLink("Cerrar sesión", "Logout", "MyAccount")</li>
+                        else
+                        {
+                            <li>@Html.ActionLink("Iniciar sesión", "Login", "MyAccount")</li>
+                        }
                     }
-                    else
-                    {
-                        <li>@Html.ActionLink("Iniciar sesión", "Login", "MyAccount")</li>
-                    }
-                }
-            </ul>
-        </nav>
-    </header>
-    <section id="banner">
-        <div style="width:335px; height:75px"></div>
-        <ul class="actions">
-            <li>
-
-            </li>
-        </ul>
-    </section>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+    
+    <!-- Page Content -->
+    <div class="container">
+    </div>
+    <br />
+    <br />
     <div>
         @RenderBody()
     </div>
+    <!-- /.container -->
+    <!-- jQuery -->
+    <script src="@Url.Content("~/Content/")js/jquery.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="@Url.Content("~/Content/")js/bootstrap.min.js"></script>
 </body>
 
 
