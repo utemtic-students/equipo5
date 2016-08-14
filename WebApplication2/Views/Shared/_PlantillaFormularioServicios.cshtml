@@ -57,13 +57,13 @@
             </nav>
         </header>
 
-        <div class="caption dark animated wow fadeInDown clearfix">
-            <div id="seccion1">REGISTRO PADRES</div>
-            <div id="seccion2">REGISTRO CAFETERIA</div>
-            <div id="seccion3">REGISTRO SERVICIOS ESCOLARES</div>
-            <p>Seleccione en la secci&oacute; que desee gregar a un Nuevo Usuario.</p>
-            <hr>
-        </div>
+       <center><h1>Eliga el registro que desea hacer.</h1></center>
+
+
+        @Html.ActionLink("PADRES", "RegistroPadres", "Servicios")
+        @Html.ActionLink("ALUMNOS ", "RegistroAlumnos", "Servicios")
+        @Html.ActionLink("Serivios Escolares", "", "Servicios")
+        @Html.ActionLink("Cafeteria", "", "Servicios")
         <div class="shadow"></div>
     </section><!--  End billboard  -->
     <div>

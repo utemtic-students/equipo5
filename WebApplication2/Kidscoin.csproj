@@ -479,7 +479,9 @@
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AgregarAlumnos.cs" />
+    <Compile Include="Controllers\AgregarCafeteria.cs" />
     <Compile Include="Controllers\AgregarPadres.cs" />
+    <Compile Include="Controllers\AgregarServiciosE.cs" />
     <Compile Include="Controllers\agregarVenta.cs" />
     <Compile Include="Controllers\AuthorizeUserAccessLevel.cs" />
     <Compile Include="Controllers\CafeteriaController.cs" />
@@ -561,6 +563,8 @@
     <Content Include="Views\Servicios\FuncionInsertar.cshtml" />
     <Content Include="Views\Servicios\QRALUMNO.cshtml" />
     <Content Include="Views\Servicios\QrCode.cshtml" />
+    <Content Include="Views\Servicios\RegistroCafeteria.cshtml" />
+    <Content Include="Views\Servicios\RegistroServiciosEscolares.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
