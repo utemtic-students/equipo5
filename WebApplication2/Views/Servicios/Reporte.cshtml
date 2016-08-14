@@ -3,9 +3,8 @@
     ViewBag.Title = "Reporte de Padres";
     var grid = new WebGrid(source: Model, canPage: true, rowsPerPage: 15);
     grid.Pager(WebGridPagerModes.All);
+    Layout = "~/Views/Shared/_PlantillaServicios.cshtml";
 }
-
-<h2>Reporte de Padres</h2>
 
 <style type="text/css">
   
@@ -15,7 +14,7 @@
         width: 100%;
         display: table;
         border-collapse: separate;
-        border: solid 1px black;
+        
         background-color: white;
     }
 
@@ -43,18 +42,26 @@
     }
 </style>
 
-<div id="content">
-    @grid.GetHtml(
-    tableStyle: "webgrid-table",
-    headerStyle: "webgrid-header",
-    alternatingRowStyle: "webgrid-alternating-row",
-    rowStyle: "webgrid-row-style",
-    columns: grid.Columns(
-        //here i will add column for serial no
-        // grid.Column(header: "Serial No", format:@<text><div>@(item.WebGrid.Rows.IndexOf(item) + 1)</div></text>),
-        grid.Column(columnName: "Id", header: "ID"),
-        grid.Column(columnName: "Nombre", header: "NOMBRE"),
-        grid.Column(columnName: "Apellido", header: "APELLIDO"),
-        grid.Column(columnName: "Usuario", header: "USUARIO")))
-</div>
+<div id="content"class="col-md-8 col-md-offset-4" >
+    <br />
+    <br />
+    <h2>Reporte de Padres</h2>
+    <div >
+            @grid.GetHtml(
+        tableStyle: "webgrid-table",
+        headerStyle: "webgrid-header",
+        alternatingRowStyle: "webgrid-alternating-row",
+        rowStyle: "webgrid-row-style",
+        columns: grid.Columns(
+            //here i will add column for serial no
+            // grid.Column(header: "Serial No", format:@<text><div>@(item.WebGrid.Rows.IndexOf(item) + 1)</div></text>),
+            grid.Column(columnName: "Id", header: "ID"),
+            grid.Column(columnName: "Nombre", header: "NOMBRE"),
+            grid.Column(columnName: "Apellido", header: "APELLIDO"),
+            grid.Column(columnName: "Usuario", header: "USUARIO")))
+    </div>
+
+    </div>
+    
+   
 
