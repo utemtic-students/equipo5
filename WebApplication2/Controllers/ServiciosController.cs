@@ -107,6 +107,56 @@ namespace WebApplication2.Controllers
             return PartialView();
         }
 
+        [HttpGet]
+        public ActionResult RegistroCafeteria()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult RegistroCafeteria(FormCollection formCollection)
+        {
+            User Cafeteria = new User();
+            // Retrieve form data using form collection
+            Cafeteria.Username = formCollection["UserName"];
+            Cafeteria.Password = formCollection["Password"];
+            Cafeteria.FirstName = formCollection["FirstName"];
+            Cafeteria.LastNane = formCollection["LastNane"];
+            Cafeteria.Area = formCollection["Area"];
+            Cafeteria.EmailID = formCollection["EmailID"];
+
+
+            AgregarCafeteria agregarCafeteria =
+                new AgregarCafeteria();
+
+            agregarCafeteria.AregarCafeteria(Cafeteria);
+            return RedirectToAction("servicios");
+        }
+        [HttpGet]
+        public ActionResult RegistroServiciosEscolares()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult RegistroServiciosEscolares(FormCollection formCollection)
+        {
+            User ServiciosE = new User();
+            // Retrieve form data using form collection
+            ServiciosE.Username = formCollection["UserName"];
+            ServiciosE.Password = formCollection["Password"];
+            ServiciosE.FirstName = formCollection["FirstName"];
+            ServiciosE.LastNane = formCollection["LastNane"];
+            ServiciosE.Area = formCollection["Area"];
+            ServiciosE.EmailID = formCollection["EmailID"];
+
+            AgregarServiciosE agregarServiciosE =
+                new AgregarServiciosE();
+
+            agregarServiciosE.AgregarServicioE(ServiciosE);
+            return RedirectToAction("servicios");
+        }
+
         public ActionResult Crud(int id = 0)
         {
             return View();
