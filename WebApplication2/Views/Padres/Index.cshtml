@@ -4,34 +4,61 @@
     Layout = "~/Views/Shared/_plantillaPadres.cshtml";
 }
 
-<h3>Hola, @ViewData["Nombre"].<br />
-   Esta es la información de tus hijos registrados, si hay algun error contacta al soporte para una corrección de información.<br />
-    </h3>
+<div class="container">
 
+    <!-- Team Members -->
+    <div class="row">
 
+        <div class="col-md-8 text-center">
+            <div class="thumbnail">
+                <div class="caption">
+                    <h2 class="page-header">Hola, @ViewData["Nombre"].</h2>
+                    <h3>
+                        Su saldo actual es: $@ViewData["saldo"]<br /><br />
+                        <small>
+                            Si quiere agregar mas saldo, por favor ingrese una cantidad y continue con el proceso de pago.
+                        </small>
+                    </h3>
+                </div>
+            </div>
+        </div>
 
-@{Html.RenderAction("Hijos","Padres", new { id = ViewData["id"] });}
+        <div class="col-md-4 text-center">
+            <div class="thumbnail">
+                <div class="caption">
+                    <h2 class="page-header">
+                        <i class="glyphicon glyphicon-usd"></i>Pago por paypal<br />
+                    </h2>
 
-<p>
-    <h2>
-        Su saldo actual es: $@ViewData["saldo"].<br />
-        Si quiere agregar mas saldo, por favor ingrese una cantidad y continue con el proceso de pago.<br />
-    </h2>
-</p>
-Pago por paypal
-
-<form action="@ConfigurationManager.AppSettings["urlSubmitPayment"]">
-    <input type="hidden" name="cmd" value="_xclick" />
-    <input type="hidden" name="upload" value="1" />
-    <input type="hidden" name="return" value="@ConfigurationManager.AppSettings["urlReturn"]" />
-    <input type="hidden" name="business" value="@ConfigurationManager.AppSettings["accountBusiness"]" />
-    <input type="hidden" name="item_name" value="Agregar saldo a KidsCoin" />
-    <input type="hidden" name="item_number" value="@ViewData["ID"]" />
-    <input type="number" name="amount" value="" placeholder="Agrege cantidad" />
-
-    <br />
-    <div class="col-md-12">
-        <input type="submit" value="Procesar solicitud" class="btn btn-primary col-md-12" />
+                    <form action="@ConfigurationManager.AppSettings["urlSubmitPayment"]">
+                        <input type="hidden" name="cmd" value="_xclick" />
+                        <input type="hidden" name="upload" value="1" />
+                        <input type="hidden" name="return" value="@ConfigurationManager.AppSettings["urlReturn"]" />
+                        <input type="hidden" name="business" value="@ConfigurationManager.AppSettings["accountBusiness"]" />
+                        <input type="hidden" name="item_name" value="Agregar saldo a KidsCoin" />
+                        <input type="hidden" name="item_number" value="@ViewData["ID"]" />
+                        <div class="input-group ">
+                            <span class="input-group-addon">$</span>
+                            <input type="number" class="form-control" name="amount" value="" placeholder="Agrege cantidad" />
+                        </div>
+                        <br />
+                        <input type="submit" value="Procesar solicitud" class="btn btn-primary" />
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
-</form>
+    <!-- /.row -->
+    <!-- Features Section -->
 
+
+    @{Html.RenderAction("Hijos", "Padres", new { id = ViewData["id"] });}
+
+
+    <div class="alert alert-warning" role="alert">
+        <a href="#" class="alert-link">
+            Esta es la información de tus hijos registrados, si hay algun error contacta al soporte para una corrección de información.
+        </a>
+    </div>
+
+    </form>
