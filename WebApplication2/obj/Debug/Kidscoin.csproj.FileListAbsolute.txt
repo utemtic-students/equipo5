@@ -493,3 +493,9 @@ C:\Users\jhoana Angelica\Documents\GitHub\kidscoin\WebApplication2\bin\zxing.pdb
 C:\Users\jhoana Angelica\Documents\GitHub\kidscoin\WebApplication2\bin\zxing.xml
 C:\Users\jhoana Angelica\Documents\GitHub\kidscoin\WebApplication2\bin\zxing.presentation.pdb
 C:\Users\jhoana Angelica\Documents\GitHub\kidscoin\WebApplication2\bin\zxing.presentation.xml
+D:\Users\SLIFER\Documents\GitHub\kidscoin\WebApplication2\bin\zxing.dll
+D:\Users\SLIFER\Documents\GitHub\kidscoin\WebApplication2\bin\zxing.presentation.dll
+D:\Users\SLIFER\Documents\GitHub\kidscoin\WebApplication2\bin\zxing.pdb
+D:\Users\SLIFER\Documents\GitHub\kidscoin\WebApplication2\bin\zxing.xml
+D:\Users\SLIFER\Documents\GitHub\kidscoin\WebApplication2\bin\zxing.presentation.pdb
+D:\Users\SLIFER\Documents\GitHub\kidscoin\WebApplication2\bin\zxing.presentation.xml

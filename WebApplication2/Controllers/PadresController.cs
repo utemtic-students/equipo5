@@ -54,13 +54,10 @@ namespace WebApplication2.Controllers
         public PartialViewResult Hijos(int id)
         {
 
-            var rv = new List<Alumno>();
-            using (MyDatabaseEntities dc = new MyDatabaseEntities())
-            {
-                var res = dc.Alumnos.Where(a => a.Id_Padre == id ).FirstOrDefault();
-               // List<Alumno> ls = new List<Alumno>();
-                rv.Add(res);
-            }
+            MyDatabaseEntities dc = new MyDatabaseEntities();
+            var res = dc.Alumnos.Where(a => a.Id_Padre == id).ToList();
+            var rv = res;
+
             return PartialView(rv);
         }
 
