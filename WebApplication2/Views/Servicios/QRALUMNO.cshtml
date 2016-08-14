@@ -1,0 +1,5 @@
+﻿@using QrCode.Helper
+@{
+    var source = ViewData["id"];
+ }
+@Html.GenerarQr(source.ToString());

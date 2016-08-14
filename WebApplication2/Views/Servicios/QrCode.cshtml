@@ -1,0 +1,9 @@
+﻿
+@{
+    ViewBag.Title = "KidsCoin | Código QR";
+}
+
+<h2>QrCode</h2>
+
+@{Html.RenderAction("QRALUMNO", "Servicios", new { id = ViewData["numero"] });}
+

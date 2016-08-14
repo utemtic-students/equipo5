@@ -486,3 +486,10 @@ C:\Users\jhoana Angelica\Documents\GitHub\kidscoin\WebApplication2\bin\es\System
 C:\Users\jhoana Angelica\Documents\GitHub\kidscoin\WebApplication2\bin\es\System.Web.Mvc.resources.dll
 C:\Users\jhoana Angelica\Documents\GitHub\kidscoin\WebApplication2\obj\Debug\WebApplication2.dll
 C:\Users\jhoana Angelica\Documents\GitHub\kidscoin\WebApplication2\obj\Debug\WebApplication2.pdb
+C:\Users\jhoana Angelica\Documents\GitHub\kidscoin\WebApplication2\obj\Debug\Kidscoin.csprojResolveAssemblyReference.cache
+C:\Users\jhoana Angelica\Documents\GitHub\kidscoin\WebApplication2\bin\zxing.dll
+C:\Users\jhoana Angelica\Documents\GitHub\kidscoin\WebApplication2\bin\zxing.presentation.dll
+C:\Users\jhoana Angelica\Documents\GitHub\kidscoin\WebApplication2\bin\zxing.pdb
+C:\Users\jhoana Angelica\Documents\GitHub\kidscoin\WebApplication2\bin\zxing.xml
+C:\Users\jhoana Angelica\Documents\GitHub\kidscoin\WebApplication2\bin\zxing.presentation.pdb
+C:\Users\jhoana Angelica\Documents\GitHub\kidscoin\WebApplication2\bin\zxing.presentation.xml

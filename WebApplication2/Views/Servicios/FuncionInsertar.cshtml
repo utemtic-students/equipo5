@@ -1,5 +1,10 @@
 ﻿@model WebApplication2.Alumno
 
+@{
+   
+    Layout = "~/Views/Shared/_FormatoFormularioServicios.cshtml";
+}
+
 @using (Html.BeginForm("FuncionInsertar", "Servicios"))
 {
     @Html.AntiForgeryToken()
@@ -41,5 +46,5 @@
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Back to List", "QRALUMNO")
 </div>
