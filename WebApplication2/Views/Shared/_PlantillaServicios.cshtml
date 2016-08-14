@@ -32,7 +32,7 @@
                 <ul>
                     @{
                         <li>Hola, @(Request.IsAuthenticated ? HttpContext.Current.User.Identity.Name : "Servicios Escolares")</li>
-                        <li>@Html.ActionLink("REGISTRO DE USUARIOS", "RegistroPadres", "Servicios")</li>
+                        <li>@Html.ActionLink("REGISTRO DE USUARIOS", "Registros", "Servicios")</li>
                         <li>@Html.ActionLink("PADRES", "Reporte", "Servicios")</li>
                         <li>@Html.ActionLink("ALUMNOS", "Reportealumnos", "Servicios")</li>
                         <li>@Html.ActionLink("ELIMINAR USUARIOS", "RegistroPadres", "Servicios")</li>

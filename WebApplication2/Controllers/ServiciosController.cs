@@ -63,7 +63,8 @@ namespace WebApplication2.Controllers
         [HttpPost]
         public ActionResult FuncionInsertar(FormCollection formCollection)
         {
-
+            string NombreTemporal = "";
+            string ApellidoTemporal = "";
             if (formCollection.Count > 0)
             {
                 Alumno alumno = new Alumno();
@@ -73,16 +74,38 @@ namespace WebApplication2.Controllers
                 // int id = Int32.Parse(alumno.Id_Padre);
                 alumno.Id_Padre = Int32.Parse(formCollection["Id_Padre"]);
 
+                NombreTemporal = formCollection["Nombre"];
+                ApellidoTemporal = formCollection["Apellido"];
+
                 AgregarAlumnos agregarAlumnos =
                     new AgregarAlumnos();
 
                 agregarAlumnos.AgregarAlumno(alumno);
             }
 
-            return RedirectToAction("servicios");
+            MyDatabaseEntities dc = new MyDatabaseEntities();
+
+            var alumno2 = dc.Alumnos.Where(a => a.Nombre.Equals(NombreTemporal) && a.Apellido.Equals(ApellidoTemporal)).FirstOrDefault();
+            string id = alumno2.Id_Hijo.ToString();
+
+            return RedirectToAction("QrCode", new { id = id });
 
         }
 
+        public ActionResult QrCode(string id)
+        {
+            ViewData["numero"] = id;
+
+            return View();
+        }
+
+        
+        [ChildActionOnly]
+        public PartialViewResult QRALUMNO(string id)
+        {
+            ViewData["id"] = id;
+            return PartialView();
+        }
 
         public ActionResult Crud(int id = 0)
         {

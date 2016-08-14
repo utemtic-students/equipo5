@@ -74,6 +74,14 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
+    <Reference Include="zxing, Version=0.14.0.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.14.0.1\lib\net40\zxing.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="zxing.presentation, Version=0.14.0.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.14.0.1\lib\net40\zxing.presentation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System.Web.Razor">
@@ -416,6 +424,7 @@
     <Compile Include="Controllers\MyAccountController.cs" />
     <Compile Include="Controllers\PadresController.cs" />
     <Compile Include="Controllers\pruebaController.cs" />
+    <Compile Include="Controllers\QRHelper.cs" />
     <Compile Include="Controllers\ServiciosController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -487,6 +496,8 @@
     <Content Include="Views\Padres\Hijos.cshtml" />
     <Content Include="Views\Padres\prueba.cshtml" />
     <Content Include="Views\Servicios\FuncionInsertar.cshtml" />
+    <Content Include="Views\Servicios\QRALUMNO.cshtml" />
+    <Content Include="Views\Servicios\QrCode.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
