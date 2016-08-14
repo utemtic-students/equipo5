@@ -2,8 +2,11 @@
 @{
     ViewBag.Title = "acreditacionPaypal";
 }
+<div class="alert alert-success" role="alert">
+    <h1>Felicidades!</h1><h2>Su abono de $@ViewData["agrego"] pesos se ha acreditado exitosamente!</h2>
+    Vuelva a la pagina principal <a href="" class="alert-link">@Html.ActionLink("Regresar", "Index", "Padres")</a>
+</div>
 
-<h2>Su abono de $@ViewData["agrego"] pesos se ha acreditado exitosamente!</h2>
 
 
-@Html.ActionLink("Regresar", "Index", "Padres")
+ndex", "Padres")
