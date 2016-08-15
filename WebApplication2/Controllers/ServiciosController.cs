@@ -55,7 +55,7 @@ namespace WebApplication2.Controllers
         [HttpGet]
         public ActionResult FuncionInsertar()
         {
-            return View();
+            return PartialView();
         }
 
         [HttpPost]
