@@ -178,7 +178,7 @@ namespace WebApplication2.Controllers
         {
             MyDatabaseEntities dc = new MyDatabaseEntities();
             return View(dc.Alumnos.ToList());
-         }
+        }
         public ActionResult delAlumno(int id)
         {
             using (MyDatabaseEntities dc = new MyDatabaseEntities())
