@@ -12,10 +12,16 @@
         font-size: 12pt;
     }
 
+
+  
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+    display: block;
+}
     /* Header */
 
     #skel-layers-wrapper {
-        padding-top: 0;
+        padding-top: 1px ;
     }
 
     #header {
@@ -25,7 +31,7 @@
     /* Banner */
 
     #banner {
-        padding: 12em 2em 10em;
+        padding: 0em 0em 0em;
     }
 
     /* Layers */

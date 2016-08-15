@@ -7,101 +7,94 @@
     <meta charset="utf-8">
     <meta name="author" content="pixelhint.com">
     <meta name="description" content="Sublime Stunning free HTML5/CSS3 website template" />
-    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/SERVCSS/")css/reset.css">
-    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/SERVCSS/")css/fancybox-thumbs.css">
-    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/SERVCSS/")css/fancybox-buttons.css">
-    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/SERVCSS/")css/fancybox.css">
-    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/SERVCSS/")css/animate.css">
-    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/SERVCSS/")css/main.css">
     <link rel="shortcut icon" type="image/ico" href="@Url.Content("~/Content/Plantilla/")img/logo.ico">
 
-    <script type="text/javascript" src="@Url.Content("~/Content/SERVCSS/")js/jquery.js"></script>
-    <script type="text/javascript" src="@Url.Content("~/Content/SERVCSS/")js/fancybox.js"></script>
-    <script type="text/javascript" src="@Url.Content("~/Content/SERVCSS/")js/fancybox-buttons.js"></script>
-    <script type="text/javascript" src="@Url.Content("~/Content/SERVCSS/")js/fancybox-media.js"></script>
-    <script type="text/javascript" src="@Url.Content("~/Content/SERVCSS/")js/fancybox-thumbs.js"></script>
-    <script type="text/javascript" src="@Url.Content("~/Content/SERVCSS/")js/wow.js"></script>
-    <script type="text/javascript" src="@Url.Content("~/Content/SERVCSS/")js/main.js"></script> 
+    <script type="text/javascript" src="@Url.Content("~/Content/")scriptTablaCafeteria.js"></script>
+    <script src="@Url.Content("~/Content/SERVCSS/")js/jquery.min.js"></script>
+    <script src="@Url.Content("~/Content/SERVCSS/")js/skel.min.js"></script>
+    <script src="@Url.Content("~/Content/SERVCSS/")js/skel-layers.min.js"></script>
+    <script src="@Url.Content("~/Content/SERVCSS/")js/init.js"></script>
+    <script src="@Url.Content("~/Content/")js/jquery-1.9.1.min.js"></script>
+    <script src="@Url.Content("~/Content/")js/jsqrcode-combined.min.js"></script>
+    <script src="@Url.Content("~/Content/")js/html5-qrcode.min.js"></script>
+
+
+    <link rel="stylesheet" href="@Url.Content("~/Content/SERVCSS/")css/style.css" />
+    <link rel="stylesheet" href="@Url.Content("~/Content/SERVCSS/")css/style-xlarge.css" />
+    <link rel="stylesheet" href="@Url.Content("~/Content/SERVCSS/")css/style-medium.css" />
+    <link rel="stylesheet" href="@Url.Content("~/Content/SERVCSS/")css/style-small.css" />
+    <link rel="stylesheet" href="@Url.Content("~/Content/SERVCSS/")css/style-xsmall.css" />
 
     <link rel="stylesheet" href="@Url.Content("~/Content/SERVCSS/")css/bootstrap.css" />
-    <link rel="stylesheet" href="@Url.Content("~/Content/SERVCSS/")css/bootstrap.min.css" />
-    <link rel="stylesheet" href="@Url.Content("~/Content/SERVCSS/")css/modern-business.css" />
-    <link rel="stylesheet" href="@Url.Content("~/Content/SERVCSS/")font-awesome/css/font-awesome.min.css" />
 
+    <link rel="shortcut icon" type="image/ico" href="@Url.Content("~/Content/Padres/")img/logo.ico">
+    <!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
 
 
 </head>
 <body class="landing">
     <!-- Header -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <h2>
-                    <a class="navbar-brand" id="header">
-                        @Html.ActionLink("KidsCoin", "Index", "Home")
-                    </a>
-                </h2>
-            </div>
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    @{
-                        <li><a href="">Hola @(Request.IsAuthenticated ? HttpContext.Current.User.Identity.Name : "Servicios Escolares") </a></li>
-                        <li>@Html.ActionLink("Registros", "Registros", "servicios")</li>
-                        <li>@Html.ActionLink("PADRES", "Reporte", "Servicios")</li>
-                        <li>@Html.ActionLink("ELIMINAR USUARIOS", "RegistroPadres", "Servicios")</li>
+    <header id="header">
+        <h1>@Html.ActionLink("KidsCoin", "Index", "Home")</h1>
+        <nav id="nav">
+            <ul class="nav navbar-nav navbar-right">
+                @{
+                    <li><h2>Hola @(Request.IsAuthenticated ? HttpContext.Current.User.Identity.Name : "Servicios Escolares") </h2></li>
+                            <li>@Html.ActionLink("Registros", "Registros", "servicios")</li>
+                            <li>@Html.ActionLink("PADRES", "Reporte", "Servicios")</li>
+                            <li>@Html.ActionLink("ELIMINAR USUARIOS", "RegistroPadres", "Servicios")</li>
 
 
-                        if (Request.IsAuthenticated)
+                    if (Request.IsAuthenticated)
+                    {
+                        if (Request.FilePath.Contains("Cafeteria"))
                         {
-                            if (Request.FilePath.Contains("Cafeteria"))
-                            {
-                                <li>@Html.ActionLink("Reporte de ventas", "ReporteVentas", "Cafeteria")</li>
-                            }
-
-                            using (Html.BeginForm("Logout", "MyAccount", FormMethod.Post, new { id = "logoutform" }))
-                            {
-                                <li><a> @Html.ActionLink("Cerrar sesión", "Logout", "MyAccount")</a></li>
-                            }
+                            <li>@Html.ActionLink("Reporte de ventas", "ReporteVentas", "Cafeteria")</li>
                         }
-                        else
+
+                        using (Html.BeginForm("Logout", "MyAccount", FormMethod.Post, new { id = "logoutform" }))
                         {
-                            <li>@Html.ActionLink("Iniciar sesión", "Login", "MyAccount")</li>
+                            <li><h3>@Html.ActionLink("Cerrar sesión", "Logout", "MyAccount")</h3></li>
                         }
                     }
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
-    
+                    else
+                    {
+                        <li><a href="">@Html.ActionLink("Iniciar sesión", "Login", "MyAccount")</a></li>
+                    }
+                }
+            </ul>
+        </nav>
+    </header>
+    <section id="banner">
+        <div style="width:335px; height:112px"></div>
+        <ul class="actions">
+            <li>
+            </li>
+        </ul>
+    </section>
+
     <div class="row">
         <div class="form-horizontal col-md-8 col-md-offset-5">
-                    <br />
-                    <center><h1>Eliga el registro que desea hacer.</h1></center> <br />                 
-                 
-                    <nav aria-label="...">
-                        <ul class="pager">
-                            <li>@Html.ActionLink("PADRES", "RegistroPadres", "Servicios")</li>
-                            <li>@Html.ActionLink("ALUMNOS ", "RegistroAlumnos", "Servicios")</li>
-                            <li>@Html.ActionLink("Serivios Escolares", "RegistroServiciosEscolares", "Servicios")</li>
-                            <li>@Html.ActionLink("Cafeteria", "RegistroCafeteria", "Servicios")</li>
-                        </ul>
-                    </nav>
+            <br />
+            <center><h1>Eliga el registro que desea hacer.</h1></center> <br />
+
+            <nav aria-label="...">
+                <ul class="pager">
+                    <li>@Html.ActionLink("PADRES", "RegistroPadres", "Servicios")</li>
+                    <li>@Html.ActionLink("ALUMNOS ", "RegistroAlumnos", "Servicios")</li>
+                    <li>@Html.ActionLink("Serivios Escolares", "RegistroServiciosEscolares", "Servicios")</li>
+                    <li>@Html.ActionLink("Cafeteria", "RegistroCafeteria", "Servicios")</li>
+                </ul>
+            </nav>
         </div>
     </div>
-      
-      <!--  End billboard  -->
-        <div>
-            @RenderBody()
-        </div>
+
+    <!--  End billboard  -->
+    <div>
+        @RenderBody()
+    </div>
 </body>
+
+
 
 </html>

@@ -10,13 +10,7 @@ html {
       -ms-text-size-adjust: 100%;
 }
 body {
-    background-image: url(../img/school.jpg);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    width:auto;
-
+   
     margin: 0; 
 }
 article,
