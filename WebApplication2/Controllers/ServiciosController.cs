@@ -157,17 +157,38 @@ namespace WebApplication2.Controllers
         {
             return View();
         }
-      
+
         public ActionResult Reporte()
         {
             MyDatabaseEntities dc = new MyDatabaseEntities();
-            return View(dc.Padres.ToList());
-           
+            return View(dc.Users.ToList());
+
         }
-        public ActionResult Reportealumnos()
+        public ActionResult delete(int id)
+        {
+            using (MyDatabaseEntities dc = new MyDatabaseEntities())
+            {
+                var elim = dc.Users.Where(a => a.UserID == id).FirstOrDefault();
+                dc.Users.Remove(elim);
+                dc.SaveChanges();
+            }
+            return RedirectToAction("Reporte", "Servicios");
+
+        }
+        public ActionResult ReporteAlumnos()
         {
             MyDatabaseEntities dc = new MyDatabaseEntities();
             return View(dc.Alumnos.ToList());
+         }
+        public ActionResult delAlumno(int id)
+        {
+            using (MyDatabaseEntities dc = new MyDatabaseEntities())
+            {
+                var alum = dc.Alumnos.Where(a => a.Id_Padre == id).FirstOrDefault();
+                dc.Alumnos.Remove(alum);
+                dc.SaveChanges();
+            }
+            return RedirectToAction("ReporteAlumnos");
 
         }
 
