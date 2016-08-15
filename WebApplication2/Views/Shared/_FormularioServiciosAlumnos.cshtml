@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <meta charset="utf-8">
+    <meta name="author" content="pixelhint.com">
+    <meta name="description" content="Sublime Stunning free HTML5/CSS3 website template" />
+
+    <link rel="shortcut icon" type="image/ico" href="@Url.Content("~/Content/Plantilla/")img/logo.ico">
+
+    <script type="text/javascript" src="@Url.Content("~/Content/SERVCSS/")js/jquery.js"></script>
+    <script type="text/javascript" src="@Url.Content("~/Content/SERVCSS/")js/fancybox.js"></script>
+    <script type="text/javascript" src="@Url.Content("~/Content/SERVCSS/")js/fancybox-buttons.js"></script>
+    <script type="text/javascript" src="@Url.Content("~/Content/SERVCSS/")js/fancybox-media.js"></script>
+    <script type="text/javascript" src="@Url.Content("~/Content/SERVCSS/")js/fancybox-thumbs.js"></script>
+    <script type="text/javascript" src="@Url.Content("~/Content/SERVCSS/")js/wow.js"></script>
+    <script type="text/javascript" src="@Url.Content("~/Content/SERVCSS/")js/main.js"></script>
+
+    <link rel="stylesheet" href="@Url.Content("~/Content/SERVCSS/")css/bootstrap.css" />
+    <link rel="stylesheet" href="@Url.Content("~/Content/SERVCSS/")css/bootstrap.min.css" />
+    <link rel="stylesheet" href="@Url.Content("~/Content/SERVCSS/")css/modern-business.css" />
+    <link rel="stylesheet" href="@Url.Content("~/Content/SERVCSS/")font-awesome/css/font-awesome.min.css" />
+
+
+</head>
+<body class="landing">
+    <!-- Header -->
+    
+
+
+
+    @(Request.IsAuthenticated ? HttpContext.Current.User.Identity.Name : "Servicios Escolares")
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>
