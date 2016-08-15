@@ -4,52 +4,51 @@
     ViewBag.Title = "Registro Alumnos";
     Layout = "~/Views/Shared/_PlantillaServicios.cshtml";
 }
-<div style="font-family:Arial">
     <div class="row">
-        <div class="panel panel-default col-md-6 col-md-offset-4">
+        <div class="col-md-6 col-md-offset-4 ">
+            <div class="thumbnail">
+                <div class="caption">
 
-            <h2>Buscar Padre</h2>
-            <p>
-                @using (@Html.BeginForm("RegistroAlumnos", "Servicios", FormMethod.Get))
+                    <h2>Buscar Padre</h2>
+                    <p>
+                        @using (@Html.BeginForm("RegistroAlumnos", "Servicios", FormMethod.Get))
             {
-                    <b>Search By:</b>
-                    @Html.RadioButton("searchBy", "UserName", true) <text>Usuario</text>
-                    @Html.TextBox("search") <input type="submit" value="Buscar" />
-                }
-            </p>
+                            <b>Search By:</b>
+                            @Html.RadioButton("searchBy", "UserName", true) <text>Usuario</text>
+                            @Html.TextBox("search") <input type="submit" value="Buscar" />
+                        }
+                    </p>
 
-            <div class="panel-heading">Padres Registrados</div>
+                    <div class="panel-heading">Padres Registrados</div>
 
-            <!-- Table -->
-            <table class="table table-condensed">
+                    <!-- Table -->
+                    <table class="table table-condensed">
 
-                @if (Model.Count() == 1)
+                        @if (Model.Count() == 1)
             {
 
 
                 foreach (var item in Model)
                 {
-                        <tr>
-                            <td rowspan="4" width="30%">
-                                <h3>@Html.DisplayFor(modelItem => item.UserID)</h3>
-                            </td>
-                            <td rowspan="4" width="35%">
-                                <h3>  @Html.DisplayFor(modelItem => item.FirstName)</h3>
-                            </td>
-                            <td rowspan="4" width="35%">
-                                <h3>  @Html.DisplayFor(modelItem => item.LastNane)</h3>
-                            </td>
+                                <tr>
+                                    <td rowspan="4" width="30%">
+                                        <h3>@Html.DisplayFor(modelItem => item.UserID)</h3>
+                                    </td>
+                                    <td rowspan="4" width="35%">
+                                        <h3>  @Html.DisplayFor(modelItem => item.FirstName)</h3>
+                                    </td>
+                                    <td rowspan="4" width="35%">
+                                        <h3>  @Html.DisplayFor(modelItem => item.LastNane)</h3>
+                                    </td>
 
-                        </tr>
-                    }
-                }
+                                </tr>
+                            }
+                        }
 
-            </table>
-            <br />
-            <div></div>
+                    </table>
+                </div>
+                </div>
+            </div>
         </div>
-
-
-    </div>
-</div>
+                    
             @{ Html.RenderAction("FuncionInsertar", "Servicios");}
