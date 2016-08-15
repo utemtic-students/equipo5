@@ -48,8 +48,8 @@
                     @{
                         <li><a href="">Hola @(Request.IsAuthenticated ? HttpContext.Current.User.Identity.Name : "Servicios Escolares") </a></li>
                         <li>@Html.ActionLink("Registros", "Registros", "servicios")</li>
-                        <li>@Html.ActionLink("PADRES", "Reporte", "Servicios")</li>
-                        <li>@Html.ActionLink("ELIMINAR USUARIOS", "RegistroPadres", "Servicios")</li>
+                        <li>@Html.ActionLink("Padres", "Reporte", "Servicios")</li>
+                        <li>@Html.ActionLink("Alumnos", "ReporteAlumnos", "Servicios")</li>
                         
 
                         if (Request.IsAuthenticated)

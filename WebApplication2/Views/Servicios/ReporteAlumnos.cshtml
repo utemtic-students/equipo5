@@ -1,0 +1,51 @@
+﻿@model IEnumerable<WebApplication2.Alumno>
+
+@{
+    ViewBag.Title = "ReporteAlumnos";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Reporte de Alumnos</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Apellido)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Padre.Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.User.Username)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Apellido)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Padre.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.User.Username)
+            </td>
+            <td>
+                |@Html.ActionLink("Delete", "delAlumno", new { id = item.Id_Padre })
+            </td>
+        </tr>
+    }
+
+</table>
+
+
