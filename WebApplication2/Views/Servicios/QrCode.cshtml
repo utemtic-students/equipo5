@@ -4,18 +4,26 @@
     Layout = "~/Views/Shared/_PlantillaServicios.cshtml";
 }
 
-<h2>QrCode</h2>
+        <div class="row">
+            <div class="col-md-3 col-md-offset-5 text-center">
+                <div class="thumbnail">
+                    <h2>QrCode</h2>
+                    <hr />
+                    <div class="center-block">
+                        @{ Html.RenderAction("QRALUMNO", "Servicios", new { id = ViewData["numero"] });}
+                    </div>
+                <br />
+                </div>
+        </div>
+            </div>
+        <div class="row">
+            <div class="form-horizontal col-md-3 col-md-offset-5">
+                <br />
 
-@{Html.RenderAction("QRALUMNO", "Servicios", new { id = ViewData["numero"] });}
-
-<div class="row">
-    <div class="form-horizontal col-md-8 col-md-offset-5">
-        <br />
-
-        <nav aria-label="...">
-            <ul class="pager">
-                <li> @Html.ActionLink("Regresar", "Servicios", "Servicios")</li>
-            </ul>
-        </nav>
-    </div>
-</div>
+                <nav aria-label="...">
+                    <ul class="pager">
+                        <li> @Html.ActionLink("Regresar", "Servicios", "Servicios")</li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
